@@ -1,0 +1,28 @@
+local/android-sdk r21.0.1-2
+local/android-sdk-platform-tools r16.0.1-2
+local/dropbox-cli 1-13
+local/eclipse-android 21.0.1-1
+local/eclipse-emf 2.8.1-1
+local/eclipse-gef 3.8.1-1
+local/eclipse-wtp 3.4.1-1
+local/freetype2-infinality 2.4.10-1
+local/heroku-toolbelt 2.33.0-1
+local/jslint 0.1.9-0
+local/khrplatform-devel 9.0.1-1
+local/lib32-libgl 9.0.1-1
+local/lib32-libglapi 9.0.1-1
+local/libegl 9.0.1-1
+local/libgbm 9.0.1-1
+local/libglapi 9.0.1-1
+local/libmysqlclient 5.5.30-6
+local/libsoup-gnome 2.40.2-1
+local/netcfg 3.0-1 (base)
+local/nss-myhostname 0.3-3 (base)
+local/openssl098 0.9.8.x-1
+local/packer 20121226-1
+local/python-py-notify 0.2.1-3
+local/qt 4.8.4-1
+local/spotify 0.8.4.103-2
+local/thunar-dropbox 0.2.0-1
+local/ttf-google-webfonts 130210-1
+local/zukitwo-themes 20121216-2
