@@ -12,12 +12,14 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 dropbox start &
+thunar --daemon &
+/usr/bin/xscreensaver -no-splash &
 
 #Wallpapers
-while true;
-    do
-        awsetbg -r ~/Pictures/Wallpapers
-        sleep 15m
-    done &
+#while true;
+#    do
+#        awsetbg -r ~/Pictures/Wallpapers
+#        sleep 15m
+#    done &
 
 exec awesome 

@@ -1,0 +1,23 @@
+***Installed Plugins
+nerdtree - installed - :NERDTree <F9> - :help NERD_tree.txt 
+surround - installed - :help surround
+supertab - installed - :help supertab.txt
+tagbar - installed (works / syntax untested) - bound to f8 key
+syntastic - installed (untested) - doctorJS installed - :help sysntastic.txt
+easymotion - installed - :help easymotion.txt
+snipmate - vim-snipmate installed - tlib_vim, vim-addon-mw-util, snipmate-snippets dependencies 
+- :help snipMate.txt
+t-comment - :help tcomment.txt
+
+
+***Other Plugins***
+git? - https://github.com/tpope/vim-git
+jslint(not added) - https://github.com/hallettj/jslint.vim
+nerdcommenter - didn't add since tcomment is more updated?
+markdown
+sparkup 
+ack.vim  
+fugitive  
+javascript 
+vim-coffee-script
+command-t

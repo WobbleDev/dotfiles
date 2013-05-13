@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/home/alex/System'
+let g:netrw_dirhist_2='/home/alex/.vim'
+let g:netrw_dirhist_3='/home/alex/dotfiles'
+let g:netrw_dirhist_4='/home/alex/Dropbox/Zero Hour/vendor/jam/backbone'
+let g:netrw_dirhist_5='/home/alex/Dropbox/Temp/Zero Hour/app/app'
+let g:netrw_dirhist_6='/home/alex/Dropbox/ZeroDay/public/javascripts/routers'
+let g:netrw_dirhist_7='/home/alex/School/Spring 2013/ProcessorDesign/Homework5/take4'
+let g:netrw_dirhist_8='/home/alex/Dropbox/ZeroDay/public/javascripts/views/Frontpage'
+let g:netrw_dirhist_9='/home/alex/Dropbox/ZeroDay/public/javascripts/views'
