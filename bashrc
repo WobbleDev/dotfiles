@@ -13,6 +13,11 @@ alias .='cd ..'
 alias ..='cd ../..'
 alias ...='cd ../../..'
 alias l='ls'
+alias weather-atl='pymetar KFTY'
+alias weather-f-atl='weather -f kfty'
+alias c4g='cd /home/alex/Dropbox/School/Fall\ 2013/C4G/Project/Liberian-Data-Dashboards
+'
+alias c4g-server='python -m http.server'
 
 PS1='[\u@\h \W]\$ '
 alsi -u
