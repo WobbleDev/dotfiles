@@ -1,0 +1,158 @@
+{
+   "Download_PDF_File": {
+      "message": "Download PDF File"
+   },
+   "Error_on_connection": {
+      "message": "Error en la conexi&oacute;n"
+   },
+   "PDFSuccessfullycreated": {
+      "message": "PDF Successfully created"
+   },
+   "View_in_GoogleDocs": {
+      "message": "View in GoogleDocs"
+   },
+   "alternative": {
+      "message": "If that doesn't work please click "
+   },
+   "alternative2": {
+      "message": "here"
+   },
+   "alternative3": {
+      "message": "If process was unsuccessful, try "
+   },
+   "bottom": {
+      "message": "Let your friends know about it. Add \u003Cstrong\u003E\u003Ca href='http://www.web2pdfconvert.com' target='_blank'\u003Ehttp://www.web2pdfconvert.com\u003C/a\u003E \u003C/strong\u003E to your site. \r\n\t\t\u003Cbr /\u003E\r\n\t\tSuggestions, feedback or maybe bug reports? Please feel free to  \u003Ca href='http://www.web2pdfconvert.com/forum/default.aspx' target='_blank'\u003Ejoin us on our forum.\u003C/a\u003E\r\n\t\t\u003Cbr /\u003EExtension written by vhanla and Icons designed by Marco Martin "
+   },
+   "conversion_button": {
+      "message": "Convert to PDF"
+   },
+   "description": {
+      "message": "Convert any webpage to PDF including most SSL based sites, using http://www.Web2PdfConvert.com."
+   },
+   "invalidURL": {
+      "message": "Sorry, this is not a valid URL "
+   },
+   "msg_11_letter": {
+      "message": "11x17 Letter"
+   },
+   "msg_activex_flash": {
+      "message": "ActiveX support"
+   },
+   "msg_author": {
+      "message": "Author:"
+   },
+   "msg_bottom": {
+      "message": "Bottom:"
+   },
+   "msg_copy": {
+      "message": "Copy"
+   },
+   "msg_cover": {
+      "message": "Web Page as cover:"
+   },
+   "msg_delay": {
+      "message": "Delay (sec) between webpage load and conversion:"
+   },
+   "msg_description_notice": {
+      "message": "Title and Keywords will be automatically filled from a web page if fields are left empty."
+   },
+   "msg_edit": {
+      "message": "Edit"
+   },
+   "msg_half_letter": {
+      "message": "Half Letter"
+   },
+   "msg_higher": {
+      "message": "[ higher quality/large file"
+   },
+   "msg_keywords": {
+      "message": "Keywords:"
+   },
+   "msg_lanscape": {
+      "message": "Landscape"
+   },
+   "msg_ledger": {
+      "message": "Ledger"
+   },
+   "msg_left": {
+      "message": "Left:"
+   },
+   "msg_legal": {
+      "message": "Legal"
+   },
+   "msg_letter": {
+      "message": "Letter"
+   },
+   "msg_lower": {
+      "message": "file lower quality/smaller file ]"
+   },
+   "msg_margins": {
+      "message": "PDF Document Margins"
+   },
+   "msg_nojs": {
+      "message": "No javascript"
+   },
+   "msg_nologo": {
+      "message": "No Web2PDF logo"
+   },
+   "msg_note": {
+      "message": "Note"
+   },
+   "msg_opass": {
+      "message": "Owner Password:"
+   },
+   "msg_pagesize": {
+      "message": "Page Size:"
+   },
+   "msg_paginate": {
+      "message": "Paginate"
+   },
+   "msg_pdf_description": {
+      "message": "PDF Document Description"
+   },
+   "msg_pdf_security": {
+      "message": "PDF Security"
+   },
+   "msg_permission": {
+      "message": "Permission (forbid)"
+   },
+   "msg_portrait": {
+      "message": "Portrait"
+   },
+   "msg_print": {
+      "message": "Print"
+   },
+   "msg_right": {
+      "message": "Right:"
+   },
+   "msg_subject": {
+      "message": "Subject:"
+   },
+   "msg_timestamp": {
+      "message": "Date and URL Stamp"
+   },
+   "msg_title": {
+      "message": "Title:"
+   },
+   "msg_top": {
+      "message": "Top:"
+   },
+   "msg_upass": {
+      "message": "User Password:"
+   },
+   "name": {
+      "message": "Web2PDFConverter"
+   },
+   "no_close": {
+      "message": "Please don't close while this pages is being converted."
+   },
+   "options": {
+      "message": "Options"
+   },
+   "save_button": {
+      "message": "Remember"
+   },
+   "title": {
+      "message": "Convert this site to PDF"
+   }
+}

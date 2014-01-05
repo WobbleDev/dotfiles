@@ -1,0 +1,119 @@
+<html>
+<head>
+	<title></title>
+	<style>
+		html, body, table tr td { font-family: Verdana; font-size: 8pt; word-wrap: break-word; word-break: break-all; }
+		img { cursor: pointer; }
+	</style>
+	<script>
+		/* Extension Options Initialization */
+		var jdInterface = localStorage["jdInterface"] || 1;
+		var jdHost = localStorage["jdHost"] || "localhost:10025";
+	
+		/* onRequest Handler */
+		function onReqHandler(request, sender, response) {
+			if (request != null && typeof(request) == "object") {
+				// Update Options Request
+				if (request.r == "updateOptions") {
+					jdInterface = request.options.jdInterface || 1;
+					jdHost = request.options.jdHost || "localhost";
+				}
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<table width="100%">
+		<tr style="background: #f0f0f0;">
+			<td width="200">
+				<script>document.write(chrome.i18n.getMessage("filter"));</script> 
+				(<span><script>document.write(chrome.i18n.getMessage("regexp"));</script></span>)
+			</td>
+			<td><input type="text" style="width: 100%" id="filter" onkeyup="updateFilter()" onchange="updateFilter()" /></td>
+		</tr>
+	</table>
+	<div id="tbl"></div>	
+	<br/>
+	<table width="100%">
+		<tr style="background: #f0f0f0;">
+			<td id="selInfo"></td>
+			<td width="10"><input type="button" id="reset" onclick="resetList()" /></td>
+			<td width="10" style="text-align: center;"><input type="button" id="add" onclick="sendToJDownloader()" /></td>
+		</tr>
+	</table>
+	<script>
+		var loc = location.href;
+		var re;
+		var dlinks = loc.substr(loc.indexOf('?') + 1).split('|');
+		var links = [], fLinks = [], sLinks = [];
+		var totalLinks = links.length;
+		for (var ed = 0; ed < dlinks.length; ed++) {
+			var contain = false;
+			for (var el = 0; el < links.length; el++) {
+				if (links[el] == dlinks[ed]) {
+					contain = true;
+					break;
+				}
+			}
+			if (!contain) links.push(dlinks[ed]);
+		}
+		for (var el = 0; el < links.length; el++) {
+			links[el] = unescape(links[el]);
+			sLinks[el] = links[el];
+			fLinks[el] = true;
+		}		
+		document.getElementById('add').value = chrome.i18n.getMessage("downloadAll");
+		document.getElementById('reset').value = chrome.i18n.getMessage("resetButton");
+		function rem(item) {
+			links.splice(item,1);
+			fLinks.splice(item,1);
+			updateList();
+		}
+		function updateFilter() {
+			var filterText = document.getElementById("filter").value;
+			if (filterText.trim().length > 0) {
+				re = new RegExp(filterText);
+				for (var el = 0; el < links.length; el++) fLinks[el] = re.test(links[el]);
+			} else {
+				for (var el = 0; el < links.length; el++) fLinks[el] = true;
+			}
+			updateList();			
+		}
+		function updateList() {
+			var tblHtml = '<table width="100%"><tr style="font-weight: bold; color:#f0f0f0"><td style="padding-left: 10px; background: #408050;">LINK</td><td style="background: #408050; width: 60px; min-width: 60px; text-align: center;">REMOVE</td></tr>';
+			var itemCount = 0;
+			for (var el = 0; el < links.length; el++) {
+				tblHtml += '<tr><td style="border-bottom: 1px dashed #f0f0f0; color: ' + (fLinks[el] ? '#000' : '#bbb') + '">' + links[el] + '</td><td align="center" valign="top" style="border-bottom: 1px dashed #f0f0f0;"><img src="rem.png" onclick="rem(' + el + ')" title="Remove" /></td></tr>';
+				if (fLinks[el]) itemCount++;
+			}
+			document.getElementById('tbl').innerHTML = tblHtml + '</table>';
+			document.getElementById('selInfo').innerHTML = chrome.i18n.getMessage("youSelected") + " " + itemCount + " " + chrome.i18n.getMessage("of") + " " + totalLinks + " " + chrome.i18n.getMessage("links");
+		}
+		function sendToJDownloader() {
+			var sendList = [];
+			for (var el = 0; el < links.length; el++) {
+				if (fLinks[el]) {
+					var notSent = true;
+					for (var i = 0; i < sendList.length; i++)
+						if (sendList[i] == links[el]) {
+							notSent = false;
+							break;
+						}
+					if (notSent) {
+						chrome.extension.sendRequest({r: "downloadUrl", url: links[el]})
+						sendList.push(links[el]);				
+					}
+				}
+			}
+			window.close();
+		}
+		function resetList() {
+			for (var el = 0; el < sLinks.length; el++) links[el] = sLinks[el];
+			updateFilter();
+		}		
+		updateList();
+	</script>
+	
+</body>
+</html>

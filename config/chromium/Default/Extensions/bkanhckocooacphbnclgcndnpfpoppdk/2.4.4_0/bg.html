@@ -1,0 +1,16 @@
+<script type="text/javascript" >
+addEventListener('load', function()
+{  	
+var MAJOR_VERSION="2.4.4";
+if(!localStorage.updateread||localStorage.updateread!=MAJOR_VERSION)
+	{
+		chrome.tabs.create(
+		{
+			url:"version.html"
+		}
+		);
+		localStorage.updateread=MAJOR_VERSION
+	}	
+}, 0);
+
+</script>

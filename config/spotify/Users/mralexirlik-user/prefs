@@ -1,0 +1,11 @@
+ui.seen.tray_icon=true
+ui.local_playlists_imported=true
+ui.sidebar_seen_at_fallback=1356660109
+ui.hide_unavailable_tracks=false
+ui.did_migrate_old_settings=true
+ui.last_seen_product_type="open"
+ui.purchase_location="/home/alex/Spotify"
+ps.post-open-graph=0
+ps.social-intro-flow=0
+apps.installed="tunewiki,tunigo"
+ui.client_accomplishments="tutorial_complete,use_app_finder,play_track_by_double_click,tutorial_complete,click_search_field,perform_search,tutorial_complete,click_new_playlist"

@@ -1,0 +1,95 @@
+<html>
+<head>
+<script>
+	var div = document.createElement('div');	
+	var jdInterface = localStorage["jdInterface"] || 1;
+	var jdHost = localStorage["jdHost"] || "localhost:10025";
+	var listWindows = [];
+	var xhr;
+	function removeAllWindows() {
+		var wl = listWindows;
+		for (var i = 0; i < wl.length; i++) {
+			chrome.windows.remove(wl[i]);
+		}
+	}
+	function checkJDownloader() {
+		xhr = new XMLHttpRequest();
+		xhr.onreadystatechange = function (evt) {
+			if (xhr.readyState == 4) {
+				if (xhr.status != 200 || xhr.responseText.substring(0,11) != 'JDownloader') {
+					alert(chrome.i18n.getMessage((jdInterface == 1 ? "errorFlashGot" : "errorJDRemoteControl")));
+					removeAllWindows();
+				}
+				listWindows = [];
+			}
+		}
+		xhr.open("GET", (jdInterface == 1 ? "http://localhost:9666/flash/" : "http://" + jdHost + "/get/version"), true);
+		xhr.send(null);
+	}
+	function onReqHandler(request, sender, response) {
+		if (request != null && typeof(request) == "object") {
+			if (request.r == "updateOptions") {
+				jdInterface = request.options.jdInterface || 1;
+				jdHost = request.options.jdHost || "localhost";
+			}
+			else if (request.r == "processSelection") {
+				div.innerHTML = request.html;
+				var aList = div.getElementsByTagName('a');
+				var links = [];
+				for (var el = 0; el < aList.length; el++) {
+					var href = aList[el].getAttribute('href');
+					if (href != null) {					
+						if (href.indexOf("://") > -1) links.push(escape(href));
+						else if (href[0] == "/") links.push(escape(request.location.substring(0,request.location.indexOf('/', request.location.indexOf('://')+3)) + href));
+						else links.push(escape(request.location.substring(0,request.location.lastIndexOf('/')+1)+href));
+					}
+				}
+				chrome.windows.create({'url': 'selectionAdd.html?' + links.join('|'), 'type': 'popup'}, 
+					function(wnd) {
+						listWindows.push(wnd.id); 
+					});			
+			}
+			else if (request.r == "downloadUrl") {
+				downloadUrl(request.url);
+			}
+		}
+	}
+	chrome.extension.onRequest.addListener(onReqHandler);	
+	function processTabUrl(tab) {
+		checkJDownloader();
+		downloadUrl(tab.url);
+	}
+	function processLinkUrl(info, tab) {
+		checkJDownloader();
+		if (info.linkUrl != null) downloadUrl(info.linkUrl);
+		else if (info.srcUrl != null) downloadUrl(info.srcUrl);
+	}	
+	function processSelection(info, tab) {
+		checkJDownloader();
+		chrome.tabs.executeScript(tab.id,{file: 'selRec.js'});	
+	}
+	function downloadUrl(url) {
+		var xhr = new XMLHttpRequest();
+		if (jdInterface == 1) {
+			xhr.open("GET", "http://localhost:9666/flash/add?submit=AddURL!&urls=" + escape(url), true);
+		} else if (jdInterface == 2) {
+			var urlParts = url.split('://');
+			var encurl;
+			if (urlParts.length > 1) {
+				var protocol = urlParts.shift();
+				encurl = protocol + '://' + escape(urlParts.join('://'));
+			}
+			else encurl = escape(url);
+			xhr.open("GET", "http://" + jdHost + "/action/add/links/grabber1/start1/" + encurl, true);
+		}		
+		xhr.send(null);
+	}
+	function mainButton_onClick() {
+		chrome.tabs.getSelected(null, processTabUrl);		
+	}
+	chrome.browserAction.onClicked.addListener(mainButton_onClick);
+	chrome.contextMenus.create({"title": chrome.i18n.getMessage("menuText"), "onclick": processLinkUrl, "contexts": ["link","video","audio","image"]});
+	chrome.contextMenus.create({"title": chrome.i18n.getMessage("downloadAll"), "onclick": processSelection, "contexts": ["selection"]});
+</script>
+</head>
+</html>

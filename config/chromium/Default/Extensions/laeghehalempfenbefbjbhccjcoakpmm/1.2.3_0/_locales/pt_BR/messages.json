@@ -1,0 +1,59 @@
+{
+   "buttonHint": {
+      "message": "Clique para enviar essa URL para o JDownloader"
+   },
+   "copyright": {
+      "message": "\u00C9 estritamente proibido copiar, alterar ou utilizar qualquer parte do c\u00F3digo dessa extens\u00E3o."
+   },
+   "downloadAll": {
+      "message": "Baixar TUDO com o JDownloader"
+   },
+   "errorFlashGot": {
+      "message": "N\u00E3o foi poss\u00EDvel comunicar-se com o JDownloader. Verifique se seu JDownloader est\u00E1 sendo executado e se a interface do FlashGot do JDownloader est\u00E1 ativa na aba de configura\u00E7\u00F5es do JDownloader. Se o problema persistir, tente reiniciar o JDownloader ou usar a interface JD Remote Control."
+   },
+   "errorJDRemoteControl": {
+      "message": "N\u00E3o foi poss\u00EDvel comunicar-se com o JDownloader. Verifique se seu JDownloader est\u00E1 sendo executado e se a interface JD Remote Control est\u00E1 ativa e configurada corretamente na aba de configura\u00E7\u00F5es do JDownloader."
+   },
+   "filter": {
+      "message": "Filtro"
+   },
+   "ipOrHost": {
+      "message": "IP ou Host do Computador onde est\u00E1 o JDownloader"
+   },
+   "jdremoteonly": {
+      "message": "(Apenas JD Remote Control)"
+   },
+   "links": {
+      "message": "links"
+   },
+   "menuText": {
+      "message": "Baixar com o JDownloader"
+   },
+   "of": {
+      "message": "de"
+   },
+   "pluginDesc": {
+      "message": "Este plugin prov\u00EA a integra\u00E7\u00E3o entre o Chrome e o JDownloader."
+   },
+   "programName": {
+      "message": "JDownloader Integration para Google Chrome\u2122"
+   },
+   "regexp": {
+      "message": "Express\u00E3o Regular"
+   },
+   "resetButton": {
+      "message": "Resetar Lista"
+   },
+   "save": {
+      "message": "Salvar"
+   },
+   "saved": {
+      "message": "Salvo!"
+   },
+   "selectInterface": {
+      "message": "Selecione a Interface do JDownloader"
+   },
+   "youSelected": {
+      "message": "Voc\u00EA selecionou"
+   }
+}

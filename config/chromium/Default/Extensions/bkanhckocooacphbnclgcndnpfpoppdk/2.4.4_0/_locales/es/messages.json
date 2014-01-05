@@ -1,0 +1,158 @@
+{
+   "Download_PDF_File": {
+      "message": "Descargar PDF"
+   },
+   "Error_on_connection": {
+      "message": "Error en la conexi&oacute;n"
+   },
+   "PDFSuccessfullycreated": {
+      "message": "PDF generado satisfactoriamente"
+   },
+   "View_in_GoogleDocs": {
+      "message": "Ver con GoogleDocs"
+   },
+   "alternative": {
+      "message": "Si demora mucho, por favor haga clic "
+   },
+   "alternative2": {
+      "message": "aqu&iacute;"
+   },
+   "alternative3": {
+      "message": "Si hubo un error, intente "
+   },
+   "bottom": {
+      "message": "Ay&uacute;danos. Enlaza \u003Cstrong\u003E\u003Ca href='http://www.web2pdfconvert.com' target='_blank'\u003Ehttp://www.web2pdfconvert.com\u003C/a\u003E \u003C/strong\u003E a tu sitio.\u003Cbr /\u003E\t\t&iquest;Sugerencias, comentarios, problemas? Por favor visite \u003Ca href='http://www.web2pdfconvert.com/forum/default.aspx' target='_blank'\u003Enuestro foro oficial.\u003C/a\u003E\u003Cbr /\u003EExtensi&oacute;n escrita por vhanla e Iconos dise&ntilde;ados por Marco Martin "
+   },
+   "conversion_button": {
+      "message": "Convertir a PDF"
+   },
+   "description": {
+      "message": "Convierta cualquier web a PDF inclusive algunas con SSL, usando  http://www.Web2PdfConvert.com."
+   },
+   "invalidURL": {
+      "message": "Lo siento, pero la URL actual no es v&aacute;lida "
+   },
+   "msg_11_letter": {
+      "message": "11x17 Carta"
+   },
+   "msg_activex_flash": {
+      "message": "Soporte de Flash ActiveX "
+   },
+   "msg_author": {
+      "message": "Autor:"
+   },
+   "msg_bottom": {
+      "message": "Abajo:"
+   },
+   "msg_copy": {
+      "message": "Copiar"
+   },
+   "msg_cover": {
+      "message": "Ingresar un sitio web para usar como cubierta: (opcional)"
+   },
+   "msg_delay": {
+      "message": "Esperar (segundos) entre carga y conversi&oacute;n del sitio web:"
+   },
+   "msg_description_notice": {
+      "message": "El T&iacute;tulo y las Palabras clave ser&aacute;n ingresadas autom&aacute;ticamente desde el sitio web si no se especifica."
+   },
+   "msg_edit": {
+      "message": "Editar"
+   },
+   "msg_half_letter": {
+      "message": "Media Carta"
+   },
+   "msg_higher": {
+      "message": "[ calidad alta/archivo grande"
+   },
+   "msg_keywords": {
+      "message": "Keywords:"
+   },
+   "msg_lanscape": {
+      "message": "Horizontal"
+   },
+   "msg_ledger": {
+      "message": "Libro mayor"
+   },
+   "msg_left": {
+      "message": "Izquierda:"
+   },
+   "msg_legal": {
+      "message": "Legal"
+   },
+   "msg_letter": {
+      "message": "Carta"
+   },
+   "msg_lower": {
+      "message": " calidad baja/archivo peque&ntilde;o ]"
+   },
+   "msg_margins": {
+      "message": "M&aacute;rgenes del PDF"
+   },
+   "msg_nojs": {
+      "message": "No JavaScript"
+   },
+   "msg_nologo": {
+      "message": "No logo Web2PDF"
+   },
+   "msg_note": {
+      "message": "Nota"
+   },
+   "msg_opass": {
+      "message": "Propietario:"
+   },
+   "msg_pagesize": {
+      "message": "P&aacute;gina:"
+   },
+   "msg_paginate": {
+      "message": "Enumerar p&aacute;ginas"
+   },
+   "msg_pdf_description": {
+      "message": "Descripci&oacute;n del PDF"
+   },
+   "msg_pdf_security": {
+      "message": "Seguridad del PDF "
+   },
+   "msg_permission": {
+      "message": "Permisos (no permitir)"
+   },
+   "msg_portrait": {
+      "message": "Vertical"
+   },
+   "msg_print": {
+      "message": "Imprimir"
+   },
+   "msg_right": {
+      "message": "Derecha:"
+   },
+   "msg_subject": {
+      "message": "Sujeto:"
+   },
+   "msg_timestamp": {
+      "message": "Marcar Fecha+URL"
+   },
+   "msg_title": {
+      "message": "T&iacute;tulo:"
+   },
+   "msg_top": {
+      "message": "Arriba:"
+   },
+   "msg_upass": {
+      "message": "Usuario:"
+   },
+   "name": {
+      "message": "Web2PDFConverter"
+   },
+   "no_close": {
+      "message": "No cierre esta extensi&oacute;n mientras se genere el documento."
+   },
+   "options": {
+      "message": "Opciones"
+   },
+   "save_button": {
+      "message": "Recordar cambios"
+   },
+   "title": {
+      "message": "Convertir este sitio a PDF"
+   }
+}

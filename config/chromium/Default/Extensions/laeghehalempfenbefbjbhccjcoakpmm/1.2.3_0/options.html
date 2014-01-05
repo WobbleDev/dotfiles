@@ -1,0 +1,81 @@
+<html>
+<head>
+	<script>
+		var $jdInterface, $jdHost;
+		function init() {
+			$jdInterface = document.getElementById("jdInterface");
+			$jdHost = document.getElementById("jdHost");
+			document.getElementById("btnSave").value = chrome.i18n.getMessage("save");
+			restore_options();
+		}
+		function restore_options() {
+			var _jdInterface = localStorage["jdInterface"] || 1,
+				_jdHost = localStorage["jdHost"] || "localhost:10025";
+			$jdInterface.value = _jdInterface;
+			$jdHost.value = _jdHost;
+		}
+		function save_options() {
+			localStorage["jdInterface"] = $jdInterface.value;
+			localStorage["jdHost"] = $jdHost.value;
+			chrome.extension.sendRequest({r: "updateOptions", options: { "jdInterface": $jdInterface.value, "jdHost": $jdHost.value }});
+			document.getElementById('status').innerHTML = chrome.i18n.getMessage("saved");
+			setTimeout("document.getElementById('status').innerHTML = ''",3000);
+		}
+	</script>
+	<style>
+		html, body, table tr td {
+			font-family: Verdana;
+			font-size: 8pt;
+		}
+		input, select {
+			width: 250px;
+		}
+		#status {
+			font-weight: bold;
+		}
+		.tbl {
+			border: 7px solid #408050;
+			-webkit-border-radius: 20px;
+			padding: 20px;
+			background: #ffffff;
+		}
+		.tdRight {
+			text-align: right;
+		}
+		.tdCenter {
+			text-align: center;
+		}
+		.about {
+			font-size: 7pt;
+			background: #f0f0f0;
+			text-align: center;
+			font-weight: bold;
+		}
+	</style>
+</head>
+
+<body onload="init()">
+	<center>
+		<table class="tbl">
+			<tr>
+				<td class="about" colspan="2"><script>document.write(chrome.i18n.getMessage("programName"));</script> (1.2.3) - Dimas Melo Filho<br /><script>document.write(chrome.i18n.getMessage("copyright"));</script></td>
+			</tr>
+			<tr><td colspan="2">&nbsp;</td></tr>
+			<tr>
+				<td class="tdRight"><script>document.write(chrome.i18n.getMessage("selectInterface"));</script>: </td>
+				<td><select id="jdInterface"><option value="1">FlashGot (Default)</option><option value="2">JD Remote Control</option></select></td>
+			</tr>
+			<tr>
+				<td class="tdRight"><script>document.write(chrome.i18n.getMessage("ipOrHost"));</script>: </td>
+				<td><input type="text" id="jdHost" /> <script>document.write(chrome.i18n.getMessage("jdremoteonly"));</script></td>
+			</tr>
+			<tr>
+				<td class="tdCenter" colspan="2"><input type="button" id="btnSave" onclick="save_options();" /></td>
+			</tr>
+			<tr>
+				<td class="tdCenter" colspan="2"><span id="status"></span></td>
+			</tr>
+		</table>
+	</center>
+</body>
+</html>

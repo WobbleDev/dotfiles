@@ -1,0 +1,18 @@
+{
+   "app": {
+      "launch": {
+         "local_path": "Palette-Creator.html"
+      }
+   },
+   "description": "Create color palettes online. Export your palettes into Illustrator, Photoshop & GIMP! Or share them with your friends on ColRD.com",
+   "icons": {
+      "128": "media/fav-palette_128x128.png",
+      "16": "media/fav-palette_16x16.png",
+      "48": "media/fav-palette_48x48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC2GKEVtPB/fH2eYnIDtWMAhbHIDtL3l8S5ejB9uzxyADFGVzDqC+vuEK5T0wb1eMQmxHtxEnt6tcack7dbambsrpj5vmPQDDYumkk68e10/WALGA6q2CELvXHJpKtwUlRlx8lTZxn7FdC/W4RTtx35tYYoZ811YzR8+xGcUKVOfQIDAQAB",
+   "name": "Palette Creator!",
+   "offline_enabled": true,
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.2.1.5"
+}

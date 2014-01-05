@@ -1,0 +1,22 @@
+{
+   "author": "vhanla",
+   "background_page": "bg.html",
+   "browser_action": {
+      "default_icon": "Icon.png",
+      "default_title": "__MSG_title__",
+      "popup": "popup.html"
+   },
+   "default_locale": "en",
+   "description": "__MSG_description__",
+   "icons": {
+      "128": "Icon128.png",
+      "16": "Icon16.png",
+      "32": "Icon32.png",
+      "48": "Icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDYOLTeX0lHcVfcputUvQ997EdjRQlmvOuZd9NgoHZMWJpt43lpD86XnoGIAHBfuAf3ofZJllBQnGNwfw1OtxpeWAocEIROVAeFG1gqVi+VLVeWBGfutb0qlapm+ksPga6w7aX4s3mJ51yfQlsmUKWPwKGavDMrvwUJ73pzyn5jMQIDAQAB",
+   "name": "__MSG_name__",
+   "permissions": [ "http://*/", "https://*/", "tabs" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "2.4.4"
+}

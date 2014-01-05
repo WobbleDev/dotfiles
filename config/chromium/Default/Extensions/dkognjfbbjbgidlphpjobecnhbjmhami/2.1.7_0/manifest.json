@@ -1,0 +1,19 @@
+{
+   "background": {
+      "scripts": [ "swagbucks.js", "background.js", "addition.js" ]
+   },
+   "description": "Use Google Search while collecting Bing rewards.",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "48": "icon48.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCyI9h6QzhuwDD2YtPHnJIumlXZFfvHggClOMcWja3lUezYZmH5gavX1EQ3caMlsBuffDcL/4t5CwXwJ11DEnVGJsw7Gi65rBd8+bZmLZ+tQcalCclyaXAUECOtCwOpuawNWxuDxBI+b2/4xMoX2bmICv/eTvYHI7eYL8RV746G/wIDAQAB",
+   "manifest_version": 2,
+   "name": "Bingo",
+   "optional_permissions": [ "http://www.swagbucks.com/", "http://*/?q=*" ],
+   "options_page": "options.html",
+   "permissions": [ "http://www.bing.com/", "tabs" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "2.1.7"
+}

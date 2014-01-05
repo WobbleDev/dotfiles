@@ -1,0 +1,168 @@
+[000:000] [o1d2879-1] Listening for HELLO.
+[000:004] [o1d2879-2] Listening for HELLO.
+[000:120] [o1d2879-1] Client connected.
+[000:121] [o1d2879-1] Registered new shared memory segment at 100
+[001:588] [o1d2879-1] Sending rendering size change: 201x113
+[002:378] [o1d2879-1] Sending rendering size change: 152x114
+[010:004] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[010:004] Error(flutemessagelistener.cc:316): [o1d2879-1] Failure to receive datagrams.
+[010:037] [o1d2879-1] Client disconnected.
+[010:038] Created new pool buffer at 0x7f8e8787b000, 76800 bytes
+[010:038] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[010:045] [o1d2879-2] Shutting down instance.
+[010:045] [o1d2879-2] Client disconnected.
+[010:046] [o1d2879-1] Shutting down instance.
+[010:046] [o1d2879-1] Client disconnected.
+[010:749] [o1d2879-3] Listening for HELLO.
+[010:754] [o1d2879-4] Listening for HELLO.
+[010:786] [o1d2879-5] Listening for HELLO.
+[010:791] [o1d2879-6] Listening for HELLO.
+[010:836] [o1d2879-7] Listening for HELLO.
+[010:841] [o1d2879-8] Listening for HELLO.
+[010:867] [o1d2879-9] Listening for HELLO.
+[010:875] [o1d2879-10] Listening for HELLO.
+[011:624] [o1d2879-11] Listening for HELLO.
+[011:630] [o1d2879-12] Listening for HELLO.
+[011:670] [o1d2879-3] Client connected.
+[011:670] [o1d2879-3] Registered new shared memory segment at 101
+[011:670] [o1d2879-5] Client connected.
+[011:671] [o1d2879-5] Registered new shared memory segment at 102
+[011:671] [o1d2879-7] Client connected.
+[011:671] [o1d2879-7] Registered new shared memory segment at 103
+[011:671] [o1d2879-9] Client connected.
+[011:671] [o1d2879-9] Registered new shared memory segment at 104
+[011:671] [o1d2879-11] Client connected.
+[011:671] [o1d2879-11] Registered new shared memory segment at 105
+[012:137] Warning(flutemessagelistener.cc:170): [o1d2879-11] Got a HELLO on an already-connected socket.
+[012:138] [o1d2879-11] Client disconnected.
+[012:138] [o1d2879-11] Client connected.
+[012:139] [o1d2879-11] Registered new shared memory segment at 106
+[012:204] [o1d2879-9] Sending rendering size change: 112x0
+[012:238] [o1d2879-7] Sending rendering size change: 112x0
+[012:238] [o1d2879-11] Sending rendering size change: 1720x0
+[012:560] [o1d2879-11] Sending rendering size change: 1279x720
+[012:584] [o1d2879-7] Sending rendering size change: 199x111
+[012:652] [o1d2879-9] Sending rendering size change: 199x111
+[015:396] [o1d2879-7] Unmapping shared mem: 103
+[015:396] Created new pool buffer at 0x7f8e8787d000, 57600 bytes
+[015:396] [o1d2879-7] Registered new shared memory segment at 107
+[026:475] [o1d2879-5] Sending rendering size change: 112x0
+[026:475] [o1d2879-5] Unmapping shared mem: 102
+[026:475] Created new pool buffer at 0x7f8e8788c000, 43200 bytes
+[026:475] [o1d2879-5] Registered new shared memory segment at 108
+[026:753] [o1d2879-5] Sending rendering size change: 84x112
+[033:646] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[033:646] Error(flutemessagelistener.cc:316): [o1d2879-5] Failure to receive datagrams.
+[033:679] [o1d2879-5] Client disconnected.
+[033:679] Created new pool buffer at 0x7f8e87897000, 172800 bytes
+[033:680] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[034:487] [o1d2879-6] Shutting down instance.
+[034:488] [o1d2879-6] Client disconnected.
+[034:489] [o1d2879-5] Shutting down instance.
+[034:489] [o1d2879-5] Client disconnected.
+[055:934] [o1d2879-11] Sending rendering size change: 1280x719
+[211:018] [o1d2879-12] Client connected.
+[211:018] [o1d2879-12] Registered new shared memory segment at 109
+[214:060] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[214:094] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[214:174] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[214:257] [o1d2879-11] Client disconnected.
+[214:258] Created new pool buffer at 0x7f8e87890000, 57600 bytes
+[214:258] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[214:259] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[214:259] Error(flutemessagelistener.cc:316): [o1d2879-12] Failure to receive datagrams.
+[214:291] [o1d2879-12] Client disconnected.
+[214:374] [o1d2879-12] Client connected.
+[214:374] [o1d2879-12] Registered new shared memory segment at 110
+[214:574] [o1d2879-12] Sending rendering size change: 1280x719
+[320:099] [o1d2879-11] Client connected.
+[320:099] [o1d2879-11] Registered new shared memory segment at 111
+[320:438] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[320:439] Error(flutemessagelistener.cc:316): [o1d2879-12] Failure to receive datagrams.
+[320:475] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[320:528] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[320:606] [o1d2879-12] Client disconnected.
+[320:606] Created new pool buffer at 0x7f8e87902000, 921600 bytes
+[320:607] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[322:909] [o1d2879-9] Unmapping shared mem: 104
+[322:909] Created new pool buffer at 0x7f8e879e3000, 57600 bytes
+[322:910] [o1d2879-9] Registered new shared memory segment at 112
+[323:997] [o1d2879-11] Sending rendering size change: 1280x714
+[324:809] [o1d2879-9] Unmapping shared mem: 112
+[324:809] Created new pool buffer at 0x7f8e8789f000, 129600 bytes
+[324:809] [o1d2879-9] Registered new shared memory segment at 113
+[325:209] [o1d2879-11] Sending rendering size change: 1280x719
+[326:524] [o1d2879-12] Client connected.
+[326:525] [o1d2879-12] Registered new shared memory segment at 114
+[326:647] [o1d2879-12] Sending rendering size change: 1280x719
+[326:758] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[326:758] Error(flutemessagelistener.cc:316): [o1d2879-11] Failure to receive datagrams.
+[326:852] [o1d2879-11] Client disconnected.
+[326:852] Created new pool buffer at 0x7f8e82002000, 518400 bytes
+[326:853] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[327:949] [o1d2879-9] Sending rendering size change: 199x109
+[331:743] [o1d2879-9] Sending rendering size change: 199x111
+[354:202] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[354:239] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[354:295] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[354:300] [o1d2879-12] Shutting down instance.
+[354:300] [o1d2879-12] Attached client while shutting down; sending shutdown notification.
+[354:300] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[354:300] [o1d2879-12] Client disconnected.
+[354:303] [o1d2879-11] Shutting down instance.
+[354:303] [o1d2879-11] Client disconnected.
+[357:222] [o1d2879-13] Listening for HELLO.
+[357:225] [o1d2879-14] Listening for HELLO.
+[357:254] [o1d2879-13] Client connected.
+[357:254] [o1d2879-13] Registered new shared memory segment at 115
+[357:479] [o1d2879-13] Sending rendering size change: 1495x0
+[357:667] [o1d2879-13] Sending rendering size change: 1280x719
+[381:275] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[381:275] Error(flutemessagelistener.cc:316): [o1d2879-3] Failure to receive datagrams.
+[381:309] [o1d2879-3] Client disconnected.
+[490:314] [o1d2879-9] Sending rendering size change: 199x109
+[491:798] [o1d2879-9] Sending rendering size change: 199x111
+[833:403] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[833:404] Error(flutemessagelistener.cc:316): [o1d2879-7] Failure to receive datagrams.
+[833:404] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[833:404] Error(flutemessagelistener.cc:316): [o1d2879-13] Failure to receive datagrams.
+[833:436] [o1d2879-7] Client disconnected.
+[833:437] Created new pool buffer at 0x7f8e878bf000, 230400 bytes
+[833:437] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[833:438] [o1d2879-13] Client disconnected.
+[833:439] Created new pool buffer at 0x7f8e87902000, 921600 bytes
+[833:440] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[833:442] [o1d2879-14] Client connected.
+[833:443] [o1d2879-14] Registered new shared memory segment at 116
+[833:913] [o1d2879-14] Sending rendering size change: 1280x719
+[834:681] [o1d2879-8] Shutting down instance.
+[834:681] [o1d2879-8] Client disconnected.
+[834:682] [o1d2879-7] Shutting down instance.
+[834:682] [o1d2879-7] Client disconnected.
+[976:092] [o1d2879-9] Unmapping shared mem: 113
+[976:092] Created new pool buffer at 0x7f8e878bf000, 230400 bytes
+[976:092] [o1d2879-9] Registered new shared memory segment at 117
+[980:093] [o1d2879-14] Sending rendering size change: 1280x714
+[980:258] [o1d2879-14] Sending rendering size change: 1280x719
+[1026:599] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[1026:599] Error(flutemessagelistener.cc:316): [o1d2879-9] Failure to receive datagrams.
+[1026:600] Error(naclhelpers.cc:170): nacl::ReceiveMessage failed : Connection reset by peer
+[1026:600] Error(flutemessagelistener.cc:316): [o1d2879-14] Failure to receive datagrams.
+[1026:632] [o1d2879-9] Client disconnected.
+[1026:632] Created new pool buffer at 0x7f8e82002000, 921600 bytes
+[1026:633] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[1026:634] [o1d2879-14] Client disconnected.
+[1026:635] Created new pool buffer at 0x7f8e84d02000, 921600 bytes
+[1026:637] Error(naclhelpers.cc:62): nacl::SendDatagram failed : Broken pipe
+[1027:206] [o1d2879-14] Shutting down instance.
+[1027:206] [o1d2879-14] Client disconnected.
+[1027:209] [o1d2879-13] Shutting down instance.
+[1027:209] [o1d2879-13] Client disconnected.
+[1027:209] [o1d2879-3] Shutting down instance.
+[1027:209] [o1d2879-3] Client disconnected.
+[1027:210] [o1d2879-4] Shutting down instance.
+[1027:210] [o1d2879-4] Client disconnected.
+[1027:210] [o1d2879-10] Shutting down instance.
+[1027:210] [o1d2879-10] Client disconnected.
+[1027:211] [o1d2879-9] Shutting down instance.
+[1027:211] [o1d2879-9] Client disconnected.

@@ -1,0 +1,643 @@
+<!--
+
+Copyright (c) 2009-2010 by Victor Alberto Gil a.k.a. vhanla
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+NOTICE THAT SOME CODE USED HERE ARE RESPECTIVE TO THEIR AUTHORS AND THEY 
+WILL BE MENTIONED IN THEIR RESPECTIVE LOCATION
+
+Icons by Marco Martin under LGPL
+
+BTW: Sorry for the messy code 
+-->
+<html> 
+<head> 
+    <style type="text/css">
+	body { overflow:hidden; color:#000;}
+         a { cursor:hand; text-decoration:none;color:#999; display:inline; }
+	a:hover{
+		color:#000;
+	}        
+	#content{
+		marging 0px;
+		width: 400px;
+		height: 200px;				
+	}
+	#head{
+		background: url('logo2.png') no-repeat;
+		width: 364px;
+		height:92px;
+	}
+	#button{
+		color: #fff;
+		cursor:pointer;
+		background:#ddd;
+		-webkit-border-radius: 8px;
+		padding: 2px 4px;
+		margin: 0px 30%;
+	}
+	#button2{
+		color: #fff;
+		cursor:pointer;
+		background:#ddd;
+		-webkit-border-radius: 8px;
+		padding: 2px 4px;		
+		font-size: 14px;
+	}
+	#button:hover, #button2:hover{
+		color: #ddd;
+		background:#777;
+	}
+	#button:active{
+		color: #fff;
+		background: #000;		
+	}
+	#result{
+		color: red;
+		overflow: visible;
+		padding: 8px;
+		font-family:Helvetica,Arial,sans-serif;
+		font-size: 12px;
+	}
+	#toggle{
+		font-family:Helvetica,Arial,sans-serif;
+		font-size: 9px;
+		color: #777;
+		cursor: pointer;
+	}
+	#toggle:hover{
+		background: #aaa;
+		-webkit-border-radius: 8px;
+		color: white;
+	}
+	#options{
+		font-family:Helvetica,Arial,sans-serif;
+		font-size: 9px;
+		color: #777;	
+		border: 1px solid;
+		padding: 4px;
+		overflow: auto;
+		max-height: 340px;
+	}
+	#bottom{
+		font-family:Helvetica,Arial,sans-serif;
+		font-size: 9px;
+		color: #777;
+		float: right;
+		
+	}
+	option{
+		font-size: 9px;
+	}
+	#mleft, #mright, #mtop, #mbottom {
+		font-size: 9px;
+	}
+	.on{
+		background: #c87283;
+		-webkit-border-radius: 8px 8px 0px 0px;
+	}
+    </style>	
+    <script type="text/javascript">    
+	
+	function $(id) { return document.getElementById(id); }
+	function validFileName(fname)
+	{		
+		var namesize=fname.length;
+		var fullresult='';
+		for(i=0;i<namesize;i++)
+		{
+			var c = fname[i];
+			switch(c){
+				case '<':
+				case '>':
+				case '|':
+				case '"':
+				case '\\':
+				case '/':
+				case ':':
+				case '*':
+				case '?':
+					fullresult+=' ';
+					break;
+				default:
+					fullresult+=c;
+			}
+		}
+		return fullresult;
+	}
+//saves options to localstorage
+function save_options(){
+	if($('op1').checked)localStorage['op1']='true';	else localStorage['op1']='false';
+	if($('op2').checked)localStorage['op2']='true';	else localStorage['op2']='false';
+	if($('op3').checked)localStorage['op3']='true';	else localStorage['op3']='false';
+	if($('op4').checked)localStorage['op4']='true';	else localStorage['op4']='false';
+	//if($('thedate').checked)localStorage['date']='true';	else localStorage['date']='false';
+	if($('ax').checked)localStorage['ax']='true';	else localStorage['ax']='false';
+
+	/*New Options*/
+	if($('or1').checked)localStorage['or1']='true';	else localStorage['or1']='false';
+	if($('or2').checked)localStorage['or2']='true';	else localStorage['or2']='false';
+	
+	localStorage['mtop'] 	= $('mtop').value;
+	localStorage['mleft'] 	= $('mleft').value;
+	localStorage['mright']	= $('mright').value;
+	localStorage['mbottom']	= $('mbottom').value;
+	
+	if($('timestamp').checked)localStorage['timestamp']='true';	else localStorage['timestamp']='false';
+	localStorage['pagesize']=$('pagesize').value;	
+	//new options
+	//pdf document description
+	localStorage['mtitle'] = $('mtitle').value;
+	localStorage['mauthor'] = $('mauthor').value;
+	localStorage['msubject'] = $('msubject').value;
+	localStorage['mkeywords'] = $('mkeywords').value;
+	//pdf security
+	localStorage['mupass'] = $('mupass').value;
+	localStorage['mopass'] = $('mopass').value;
+	if($('mcopy').checked)localStorage['mcopy']='false';	else localStorage['mcopy']='true';
+	if($('medit').checked)localStorage['medit']='false';	else localStorage['medit']='true';
+	if($('mprint').checked)localStorage['mprint']='false';	else localStorage['mprint']='true';
+	//new references
+	if($('mpaginate').checked)localStorage['mpaginate']='true';	else localStorage['mpaginate']='false';
+	if($('mjs').checked)localStorage['mjs']='false';	else localStorage['mjs']='true';
+	if($('mlogo').checked)localStorage['mlogo']='false';	else localStorage['mlogo']='true';
+	localStorage['mcover'] = $('mcover').value;
+	if($('mdelay').value<1) $('mdelay').value='1';
+	localStorage['mdelay'] = $('mdelay').value;
+}
+
+//read options
+function read_options(){			
+	if(!localStorage['ax'])localStorage['ax']='false';
+	
+	if(!localStorage['op1'] && !localStorage['op2'] && !localStorage['op3'] && !localStorage['op4'])
+	{
+		localStorage['op1']='false';
+		localStorage['op2']='true';
+		localStorage['op3']='false';
+		localStorage['op4']='false';
+	}
+	
+	if(localStorage['op1']=='true')$('op1').checked=true;
+	if(localStorage['op2']=='true')$('op2').checked=true;
+	if(localStorage['op3']=='true')$('op3').checked=true;
+	if(localStorage['op4']=='true')$('op4').checked=true;
+	//if(localStorage['date']=='true')$('thedate').checked=true;
+	if(localStorage['ax']=='true')$('ax').checked=true;	
+	
+	/* New Options */
+	if(!localStorage['or1'] && !localStorage['or2'])
+	{
+		localStorage['or1']='true';
+		localStorage['or2']='false';		
+	}
+	if(localStorage['or1']=='true')$('or1').checked=true;
+	if(localStorage['or2']=='true')$('or2').checked=true;
+	
+	if(!localStorage['mtop'])localStorage['mtop']=0;
+	$('mtop').value = localStorage['mtop'];
+	if(!localStorage['mleft'])localStorage['mleft']=0;
+	$('mleft').value = localStorage['mleft'];
+	if(!localStorage['mright'])localStorage['mright']=0;
+	$('mright').value = localStorage['mright'];
+	if(!localStorage['mbottom'])localStorage['mbottom']=0;
+	$('mbottom').value = localStorage['mbottom'];
+	
+	if(!localStorage['timestamp'])localStorage['timestamp']='false';
+	if(localStorage['timestamp']=='true')$('timestamp').checked=true;	
+	
+	if(!localStorage['pagesize'])localStorage['pagesize']='a4';
+	$('pagesize').value=localStorage['pagesize'];	
+	//new features
+	if(!localStorage['mtitle'])localStorage['mtitle']='';
+	$('mtitle').value=localStorage['mtitle'];
+	if(!localStorage['mauthor'])localStorage['mauthor']='';
+	$('mauthor').value=localStorage['mauthor'];
+	if(!localStorage['msubject'])localStorage['msubject']='';
+	$('msubject').value=localStorage['msubject'];
+	if(!localStorage['mkeywords'])localStorage['mkeywords']='';
+	$('mkeywords').value=localStorage['mkeywords'];
+	if(!localStorage['mupass'])localStorage['mupass']='';
+	$('mupass').value=localStorage['mupass'];
+	if(!localStorage['mopass'])localStorage['mopass']='';
+	$('mopass').value=localStorage['mopass'];	
+	if(!localStorage['mcopy'])localStorage['mcopy']='true';
+	if(localStorage['mcopy']=='false')$('mcopy').checked=true;	
+	if(!localStorage['medit'])localStorage['medit']='true';
+	if(localStorage['medit']=='false')$('medit').checked=true;	
+	if(!localStorage['mprint'])localStorage['mprint']='true';
+	if(localStorage['mprint']=='false')$('mprint').checked=true;	
+	if(!localStorage['mpaginate'])localStorage['mpaginate']='false';
+	if(localStorage['mpaginate']=='true')$('mpaginate').checked=true;	
+	if(!localStorage['mjs'])localStorage['mjs']='true';
+	if(localStorage['mjs']=='false')$('mjs').checked=true;	
+	if(!localStorage['mlogo'])localStorage['mlogo']='true';
+	if(localStorage['mlogo']=='false')$('mlogo').checked=true;	
+	if(!localStorage['mcover'])localStorage['mcover']='';
+	$('mcover').value=localStorage['mcover'];
+	if(!localStorage['mdelay'])localStorage['mdelay']='1';
+	$('mdelay').value=localStorage['mdelay'];
+}
+//current date in format yyyy - mm - dd in relevance order
+/*function currentDate(){
+	var date = new Date();
+	var d = date.getDate();
+	var day = (d < 10)?'0'+d:d;
+	var m = date.getMonth()+1;
+	var month = (m < 10)?'0'+m:m;
+	var yyyy = date.getYear();
+	var year = (yyyy < 1000)?yyyy+1900:yyyy;
+	return year+' - '+month+' - '+day;
+}*/
+function validatenumber(event, obj, max)
+  {
+    var code = (event.which) ? event.which : event.keyCode;
+    var character = String.fromCharCode(code);
+ 
+    if ((code >= 48 && code <= 57))
+    { // check digits
+ 
+      // Disallow all numbers if the entry is 0
+      /*if (obj.value == "0")
+	return false;*/
+	
+      if (!isNaN(obj.value))
+      {
+	if (obj.value == "0.0" && code == 48 && obj.value < max)
+	{
+	  //alert("Value cannot be less than 0.01");
+	  return false;
+	}
+      }
+ 
+      return true;
+    }
+    else if (code == 46) //46 es .
+    { // Check dot
+      if (obj.value.indexOf(".") < 0)
+      {
+	if (obj.value.length == 0)
+	 obj.value = "0";
+ 
+	return true;
+      }
+    }
+    else if (code == 8 || code == 116)
+    { // Allow backspace, F5
+      return true;
+    }
+    else if (code >=37 && code <= 40)
+    { // Allow directional arrows
+      return true;
+    }
+ 
+    return false;
+  }
+ 
+  function validatefield(obj, max)
+  { 
+    // Remove dot if last character	
+    if (obj.value.indexOf(".") == obj.value.length-1)
+    {
+      obj.value = obj.value.substring(0, obj.value.length-1)
+    } 
+    //check it 0 precedes numbers
+    else if(obj.value.indexOf("0")==0 && obj.value.length>1 && obj.value.indexOf(".")!=1)
+    {
+	obj.value = "0";
+    }
+    // Clear text box if not a number, incase user drags/drop letter into box
+    else if (isNaN(obj.value))
+    {
+      obj.value = "0";
+    }
+    else if (obj.value <= 0.01)
+    {
+      obj.value = "0";
+      //alert("No puede ser menor que 0.01.");
+    }
+    else if(obj.value > max)
+    {
+	obj.value = "0";
+	//alert("No puede ser mayor que "+max);
+	//obj.focus();
+    }   	
+  }
+
+function FadeUp(element,r,g,b){
+	if(element.fade)clearTimeout(element.fade);
+	element.style.backgroundColor="rgb("+r+","+g+","+b+")";
+	if(r==240 && g==240 && b==240){element.style.background="transparent";return;};
+	var nr=r + Math.ceil((240-r)/10);
+	var ng=g + Math.ceil((240-g)/10);
+	var nb=b + Math.ceil((240-b)/10);
+	var repeat = function(){
+		FadeUp(element,nr,ng,nb);
+	};	
+	element.fade = setTimeout(repeat,10);
+}
+function i18n(){
+if(chrome.i18n.getMessage('@@ui_locale') != 'en'){
+	$('button').innerText = chrome.i18n.getMessage('conversion_button');
+	$('toggle').innerText = chrome.i18n.getMessage('options');
+	$('bottom').innerHTML = chrome.i18n.getMessage('bottom');	
+	$("msg_activex_flash").innerHTML = chrome.i18n.getMessage("msg_activex_flash");	
+	$("msg_higher").innerHTML = chrome.i18n.getMessage("msg_higher");	
+	$("msg_lower").innerHTML = chrome.i18n.getMessage("msg_lower");	
+	$("msg_pagesize").innerHTML = chrome.i18n.getMessage("msg_pagesize");	
+	$("msg_letter").innerHTML = chrome.i18n.getMessage("msg_letter");	
+	$("msg_note").innerHTML = chrome.i18n.getMessage("msg_note");	
+	$("msg_legal").innerHTML = chrome.i18n.getMessage("msg_legal");	
+	$("msg_half_letter").innerHTML = chrome.i18n.getMessage("msg_half_letter");	
+	$("msg_11_letter").innerHTML = chrome.i18n.getMessage("msg_11_letter");	
+	$("msg_ledger").innerHTML = chrome.i18n.getMessage("msg_ledger");	
+	$("msg_portrait").innerHTML = chrome.i18n.getMessage("msg_portrait");	
+	$("msg_lanscape").innerHTML = chrome.i18n.getMessage("msg_lanscape");	
+	$("msg_margins").innerHTML = chrome.i18n.getMessage("msg_margins");	
+	$("msg_top").innerHTML = chrome.i18n.getMessage("msg_top");	
+	$("msg_left").innerHTML = chrome.i18n.getMessage("msg_left");	
+	$("msg_right").innerHTML = chrome.i18n.getMessage("msg_right");	
+	$("msg_bottom").innerHTML = chrome.i18n.getMessage("msg_bottom");	
+	$("msg_pdf_description").innerHTML = chrome.i18n.getMessage("msg_pdf_description");	
+	$("msg_title").innerHTML = chrome.i18n.getMessage("msg_title");	
+	$("msg_author").innerHTML = chrome.i18n.getMessage("msg_author");	
+	$("msg_subject").innerHTML = chrome.i18n.getMessage("msg_subject");	
+	$("msg_keywords").innerHTML = chrome.i18n.getMessage("msg_keywords");	
+	$("msg_description_notice").innerHTML = chrome.i18n.getMessage("msg_description_notice");	
+	$("msg_pdf_security").innerHTML = chrome.i18n.getMessage("msg_pdf_security");	
+	$("msg_upass").innerHTML = chrome.i18n.getMessage("msg_upass");	
+	$("msg_opass").innerHTML = chrome.i18n.getMessage("msg_opass");	
+	$("msg_permission").innerHTML = chrome.i18n.getMessage("msg_permission");	
+	$("msg_copy").innerHTML = chrome.i18n.getMessage("msg_copy");	
+	$("msg_edit").innerHTML = chrome.i18n.getMessage("msg_edit");	
+	$("msg_print").innerHTML = chrome.i18n.getMessage("msg_print");	
+	$("msg_timestamp").innerHTML = chrome.i18n.getMessage("msg_timestamp");	
+	$("msg_paginate").innerHTML = chrome.i18n.getMessage("msg_paginate");	
+	$("msg_nojs").innerHTML = chrome.i18n.getMessage("msg_nojs");	
+	$("msg_nologo").innerHTML = chrome.i18n.getMessage("msg_nologo");	
+	$("msg_cover").innerHTML = chrome.i18n.getMessage("msg_cover");	
+	$("msg_delay").innerHTML = chrome.i18n.getMessage("msg_delay");	
+	$("button2").innerHTML = chrome.i18n.getMessage("save_button");	
+}
+}
+addEventListener('load', function()
+{  	
+	read_options();
+	i18n();
+	var theURL = '';
+	var theTitle = '';
+	chrome.tabs.getSelected(null,function(tab) {
+		theURL=tab.url;
+		theTitle = tab.title;
+	});	
+	if($('button')){
+		$('button').addEventListener("click",function(){				
+				{
+				if(theURL.search('http')==0){
+					xhr = new XMLHttpRequest();				
+					xhr.onreadystatechange = function(){
+						if(xhr.readyState == 4){
+						if(xhr.status==200){
+							var response = xhr.responseText;							
+							var obj = JSON.parse(response);		
+							
+							if(obj['resultcode']!=1)msg=obj['errormessage'];
+							else{
+							msg='<strong>'+chrome.i18n.getMessage('PDFSuccessfullycreated')+'</strong><br /><a href="'+obj['fileurl']
+							+'" target="_blank">'+chrome.i18n.getMessage('Download_PDF_File')+'</a> or <a href="http://docs.google.com/viewer?url='+obj['fileurl']
+							+'" target="_blank">'+chrome.i18n.getMessage('View_in_GoogleDocs')+'</a><br /><span><a href="'+obj['fileurl']
+							+'" target="_blank"><img src="pdf-icon-32.png" /></a></span><span>size: '+obj['filesize']
+							+'</span>';//<br /><span>Url : '+obj['sourceurl']+'</span><br /><span>Filename : '+obj['filename']+'</span>';
+							}							
+							$('result').innerHTML = msg;
+							FadeUp($('content'),129,126,120);
+						}else{
+							$('result').innerHTML = chrome.i18n.getMessage('Error_on_connection');
+						}
+						}
+					}					
+					//let's build the URL base on the options
+					var compression = '';
+					if($('op2').checked)compression='&compression=1';
+					else if($('op3').checked)compression='&compression=2';
+					else if($('op4').checked)compression='&compression=3';
+					var activex='';										
+					if($('ax').checked)activex='&allowactivex=true';
+					var filename=validFileName(theTitle);
+					//if($('thedate').checked)filename+=' '+currentDate();
+					/*New options*/
+					var porient = '';
+					if($('or1').checked)compression='&porient=portrait';
+					else if($('or2').checked)compression='&porient=landscape';
+					var infostamp='&infostamp=false';
+					if($('timestamp').checked)infostamp='&infostamp=true';
+					var psize = '&psize='+localStorage['pagesize'];
+					var mtop = '&margintop='+localStorage['mtop'];
+					var mleft = '&marginleft='+localStorage['mleft'];
+					var mright = '&marginright='+localStorage['mright'];
+					var mbottom = '&marginbottom='+localStorage['mbottom'];
+					//newer options
+					var logostamp = '&logostamp='+localStorage['mlogo'];
+					var jscript = '&allowscript='+localStorage['mjs'];
+					var paginate = '&showpagenr='+localStorage['mpaginate'];
+					var userpass = '&userpass='+localStorage['mupass'];
+					var ownerpass = '&ownerpass='+localStorage['mopass'];
+					var allowcopy = '&allowcopy='+localStorage['mcopy'];
+					var allowedit = '&allowedit='+localStorage['medit'];
+					var allowprint = '&allowprint='+localStorage['mprint'];
+					var ptitle = '&title='+localStorage['mtitle'];
+					var pauthor = '&author='+localStorage['mauthor'];
+					var psubject = '&subject='+localStorage['msubject'];
+					var pkeywords = '&keywords='+localStorage['mkeywords'];
+					var conversiondelay = '&conversiondelay='+localStorage['mdelay'];
+					var coverpage = '&coverpage='+localStorage['mcover'];					
+					/*end new options*/					
+					var externalURL ='http://www.web2pdfconvert.com/convert.aspx?cURL='
+					+encodeURIComponent(theURL)
+					+'&outputmode=link'
+					//+'&title='+encodeURIComponent(filename)
+					+compression
+					+porient
+					+infostamp
+					+activex
+					+mtop
+					+mleft					
+					+mbottom
+					+mright
+					+psize
+					+logostamp
+					+jscript
+					+paginate
+					+userpass
+					+ownerpass
+					+allowcopy
+					+allowedit
+					+allowprint
+					+ptitle
+					+pauthor
+					+psubject
+					+pkeywords
+					+conversiondelay
+					+coverpage
+					+'&ref=browser-ch-add';
+					var processingURL ='http://www.web2pdfconvert.com/engine.aspx?cURL='
+					+encodeURIComponent(theURL)
+					+'&outputmode=json'
+					//+'&title='+encodeURIComponent(filename)					
+					+compression
+					+porient
+					+infostamp
+					+activex
+					+mtop
+					+mleft
+					+mbottom
+					+mright
+					+psize
+					+logostamp
+					+jscript
+					+paginate
+					+userpass
+					+ownerpass
+					+allowcopy
+					+allowedit
+					+allowprint
+					+ptitle
+					+pauthor
+					+psubject
+					+pkeywords
+					+conversiondelay
+					+coverpage
+					+'&ref=browser-ch-add';
+					$('result').innerHTML = "<strong>"+chrome.i18n.getMessage('no_close')+"</strong><br />"+theURL.substring(0,60)+"...<br /><img src='ajax-loading.gif' /><br />"+chrome.i18n.getMessage('alternative')+"<a href='"+externalURL+"' target='_blank'>"+chrome.i18n.getMessage('alternative2')+"</a>";
+					xhr.open('GET',processingURL,true);
+					xhr.send(null);			
+				}
+				else $('result').innerHTML = chrome.i18n.getMessage('invalidURL')+"<br/><br/>";
+			}
+		},false);
+	}
+	
+	if($('button2')){
+		$('button2').addEventListener("click",function(){
+			save_options();
+			FadeUp($('options'),26,26,26);
+		},false);
+	}
+}, 0);
+	
+
+</script>
+</head>
+<body>
+<div id="content">
+	<div id="head"></div>
+	<div align="center" id="button" >Convert to PDF</div>
+	<div id="result" align="center"></div>
+	<div id="toggle" style="display:none" align="right">Options</div>
+	<div id="options" style="display:none" align="right">
+		<span id="button2" style="position: fixed; float: left;">Remember</span>		
+		<strong><label id="msg_activex_flash">ActiveX support </label><input type="checkbox" id="ax"  /><br />
+		<span id="msg_higher">[ higher quality/large file</span>
+		1<input type="radio" id="op1" name="ops"/>
+		2<input type="radio" id="op2" name="ops"/>
+		3<input type="radio" id="op3" name="ops"/>
+		4<input type="radio" id="op4" name="ops"/>
+		<span id="msg_lower">file lower quality/smaller file ]</span></strong>
+		<br />
+		<label id="msg_pagesize">Page Size:</label><select name="pagesize" id="pagesize">
+		<option value="letter" id="msg_letter">Letter</option>
+		<option value="note" id="msg_note">Note</option>
+		<option value="legal" id="msg_legal">Legal</option>
+		<option value="a0">A0</option>
+		<option value="a1">A1</option>
+		<option value="a2">A2</option>
+		<option value="a3">A3</option>
+		<option value="a4">A4</option>
+		<option value="a5">A5</option>
+		<option value="a6">A6</option>
+		<option value="a7">A7</option>
+		<option value="a8">A8</option>
+		<option value="a9">A9</option>
+		<option value="a10">A10</option>
+		<option value="b0">B0</option>
+		<option value="b1">B1</option>
+		<option value="b2">B2</option>
+		<option value="b3">B3</option>
+		<option value="b4">B4</option>
+		<option value="b5">B5</option>
+		<option value="arche">ArchE</option>
+		<option value="archd">ArchD</option>
+		<option value="archc">ArchC</option>
+		<option value="archb">ArchB</option>
+		<option value="archA">ArchA</option>
+		<option value="flsa">Flsa</option>
+		<option value="halfletter" id="msg_half_letter">Half Letter</option>
+		<option value="letter11x17" id="msg_11_letter">11x17 Letter</option>
+		<option value="ledger" id="msg_ledger">Ledger</option>
+		</select>
+		<br />
+		<label id="msg_portrait">Portrait</label><input type="radio" id="or1" name="orientation"/>
+		<label id="msg_lanscape">Landscape</label><input type="radio" id="or2" name="orientation"/>
+		<br />
+		<span id="msg_margins">PDF Document Margins</span><br />
+		<label id="msg_top">Top:</label> <input type="text" id="mtop" name="mtop" size="4" onkeypress="return validatenumber(event,this,400)" onblur="validatefield(this,400)"/>
+		<label id="msg_left">Left:</label> <input type="text" id="mleft" name="mleft" size="4" onkeypress="return validatenumber(event,this,400)" onblur="validatefield(this,400)"/>
+		<label id="msg_right">Right:</label> <input type="text" id="mright" name="mright" size="4" onkeypress="return validatenumber(event,this,400)" onblur="validatefield(this,400)"/>
+		<label id="msg_bottom">Bottom:</label> <input type="text" id="mbottom" name="mbottom" size="4" onkeypress="return validatenumber(event,this,400)" onblur="validatefield(this,400)"/>
+		<br />
+		<br />
+		<span id="msg_pdf_description">PDF Document Description</span><br />		
+		<span style="float:left; width: 50%">
+		<label id="msg_title">Title:</label> <input type="text" id="mtitle" name="mtitle" size="16em" /><br />
+		<label id="msg_author">Author:</label> <input type="text" id="mauthor" name="mauthor" size="16em" /><br />
+		</span><span style="float:right; width:50%">
+		<label id="msg_subject">Subject:</label> <input type="text" id="msubject" name="msubject" size="16em" /><br />
+		<label id="msg_keywords">Keywords:</label> <input type="text" id="mkeywords" name="mkeywords" size="16em" />
+		</span>
+		<br />
+		<span id="msg_description_notice">Title and Keywords will be automatically filled from a web page if fields are left empty.</span><br />
+		<br />
+		<span id="msg_pdf_security">PDF Security</span><br />
+		<label id="msg_upass">User Password:</label> <input type="password" id="mupass" name="mupass" size="8" />
+		<label id="msg_opass">Owner Password:</label> <input type="password" id="mopass" name="mopass" size="8" /><br />
+		<span id="msg_permission">Permission (forbid)</span>: 
+		<label id="msg_copy">Copy</label><input type="checkbox" id="mcopy"  /> | 
+		<label id="msg_edit">Edit</label><input type="checkbox" id="medit"  />|
+		<label id="msg_print">Print</label><input type="checkbox" id="mprint"  /><br />
+		<br />
+		
+		<label id="msg_timestamp">Date and URL Stamp</label> <input type="checkbox" id="timestamp"  /> |
+		<label id="msg_paginate">Paginate</label><input type="checkbox" id="mpaginate"  />|
+		<label id="msg_nojs">No javascript</label> <input type="checkbox" id="mjs"  />|
+		<label id="msg_nologo">No Web2PDF logo</label> <input type="checkbox" id="mlogo"  /><br />
+		<label id="msg_cover">Web Page as cover:</label> <input type="text" id="mcover" name="mcover" size="48"/><br />
+		<label id="msg_delay">Delay (sec) between webpage load and conversion:</label> <input type="text" id="mdelay" name="mdelay" size="4" onkeypress="return validatenumber(event,this,400)" onblur="validatefield(this,400)"/><br />
+		<!--Add timestamp to filename <input type="checkbox" id="thedate" /><br />--><br />		
+	</div>
+	<hr />
+	<div id="bottom" align="right">
+		Let your friends know about it. Add <strong><a href="http://www.web2pdfconvert.com" target="_blank">http://www.web2pdfconvert.com</a> </strong> to your site. 
+		<br />
+		Suggestions, feedback or maybe bug reports? Please feel free to  <a href="http://www.web2pdfconvert.com/forum/default.aspx" target="_blank">join us on our forum.</a>
+		<br />Extension written by vhanla and Icons designed by Marco Martin 
+	</div>
+</div>
+</body>
+</html>

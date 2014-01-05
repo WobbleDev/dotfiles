@@ -1,0 +1,59 @@
+{
+   "buttonHint": {
+      "message": "Clic para enviar esta URL para JDownloader"
+   },
+   "copyright": {
+      "message": "Queda estrictamente prohibido copiar, modificar o utilizar cualquier parte del c\u00F3digo de esta extensi\u00F3n."
+   },
+   "downloadAll": {
+      "message": "Descargar TODOS con JDownloader"
+   },
+   "errorFlashGot": {
+      "message": "No se puede comunicar con el JDownloader. Aseg\u00FArese de que el JDownloader se est\u00E1 ejecutando y que la interfaz FlashGot est\u00E1 activa en el JDownloader. Si el problema persiste, intente reiniciar el JDownloader o usar la interfaz JD Remote Control."
+   },
+   "errorJDRemoteControl": {
+      "message": "No se puede comunicar con el JDownloader. Aseg\u00FArese de que el JDownloader se est\u00E1 ejecutando y que la interfaz JD Remote Control est\u00E1 activa y configurada correctamente en el JDownloader."
+   },
+   "filter": {
+      "message": "Filtro"
+   },
+   "ipOrHost": {
+      "message": "IP o Host de la computadora del JDownloader"
+   },
+   "jdremoteonly": {
+      "message": "(Solamente JD Remote Control)"
+   },
+   "links": {
+      "message": "links"
+   },
+   "menuText": {
+      "message": "Descargar con JDownloader"
+   },
+   "of": {
+      "message": "de"
+   },
+   "pluginDesc": {
+      "message": "Este plugin proporciona la integraci\u00F3n entre Chrome y JDownloader."
+   },
+   "programName": {
+      "message": "JDownloader Integration para Google Chrome\u2122"
+   },
+   "regexp": {
+      "message": "Expresi\u00F3n Regular"
+   },
+   "resetButton": {
+      "message": "Reinicializar la Lista"
+   },
+   "save": {
+      "message": "Guardar"
+   },
+   "saved": {
+      "message": "Guardado!"
+   },
+   "selectInterface": {
+      "message": "Select JDownloader Interface"
+   },
+   "youSelected": {
+      "message": "Ha seleccionado"
+   }
+}

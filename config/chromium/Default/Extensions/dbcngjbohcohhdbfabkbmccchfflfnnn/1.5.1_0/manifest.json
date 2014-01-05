@@ -1,0 +1,17 @@
+{
+   "app": {
+      "launch": {
+         "web_url": "http://www01.webplayhub.com/?gid=104&play=fullscreen"
+      },
+      "urls": [ "http://www01.webplayhub.com/?gid=104&play=fullscreen" ]
+   },
+   "description": "The 3rd World in the Fancy Pants Adventures!",
+   "icons": {
+      "128": "icon_128.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDm2iQ1vDKTq/XaiwwwjuzxiRv/zUeZ35F5RP9PwseVz9nbugwf+w8fYxq+sbO+u3moZGjmerDOIOgxD2P8OrRtO/D0ukZKSfOG56RQNSDrLWprUBFbsYb7DL8ACq0x/evoAMNLuKQK30ppFxNaxkiJCTMab9w4iQRiCn1htOLvaQIDAQAB",
+   "name": "The Fancy Pants Adventure: World 3",
+   "permissions": [ "unlimitedStorage" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.5.1"
+}

@@ -1,0 +1,7 @@
+autologin.blob="NLsfGlb8gqs67ETnzf+L0mvmtDLKcm7mJs5lFVntyi+tKDoTXzzcPfJdxyNafhzl"
+core.csrf_tokens="*.spotify.com|df8e63008e3ddc6e70e602816f858c32|616048423"
+core.flash_version=11
+core.clock_delta=0
+autologin.canonical_username="mralexirlik"
+network.listen_port=64821
+autologin.username="mralexirlik"

@@ -1,0 +1,785 @@
+{
+	"folder_history":
+	[
+	],
+	"last_window_id": 2,
+	"settings":
+	{
+		"new_window_height": 1179.0,
+		"new_window_settings":
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"part",
+						"party_history"
+					],
+					[
+						"Part",
+						"Party_History"
+					],
+					[
+						"Ac",
+						"Activity_History"
+					],
+					[
+						"U",
+						"UserPageController"
+					],
+					[
+						"pers",
+						"personally_attending"
+					],
+					[
+						"person",
+						"personally_attending_model"
+					],
+					[
+						"per",
+						"personally_attending"
+					],
+					[
+						"perso",
+						"personally_attending_model"
+					]
+				]
+			},
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/frontpage.css",
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/general.css",
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/userpage.css",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Party_History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Pictures.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Subscribed.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Comments.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Awards.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/frontpage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/partypage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Thumb_Sidebar.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/userpage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Awards.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Comments.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Currently_Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Current_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Friends_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Members.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Party_History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Party_People.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Pictures.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Subscribed.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Subscribed_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Upcoming_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/User_Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/organizationpage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/main.js",
+				"/home/alex/Dropbox/ZeroDay/app.js",
+				"/home/alex/Dropbox/ZeroDay/routes/user_page.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/templates/UserPage/user_information_grid.tpl",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/UserPage/User_Information_Grid.js",
+				"/home/alex/School/Spring 2013/ProcessorDesign/Homework3/Assembler/addTest.s"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"total",
+					"info_grid",
+					"Upcoming_Parties",
+					"upcoming",
+					"party_page"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"gen"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true
+		},
+		"new_window_width": 1918.0
+	},
+	"windows":
+	[
+		{
+			"auto_complete":
+			{
+				"selected_items":
+				[
+					[
+						"Parties",
+						"Parties_Collection"
+					],
+					[
+						"h",
+						"history"
+					],
+					[
+						"mem",
+						"members"
+					],
+					[
+						"up",
+						"upcoming"
+					],
+					[
+						"upci",
+						"upcoming_model"
+					],
+					[
+						"part",
+						"party_history"
+					],
+					[
+						"Part",
+						"Party_History"
+					],
+					[
+						"Ac",
+						"Activity_History"
+					],
+					[
+						"U",
+						"UserPageController"
+					],
+					[
+						"pers",
+						"personally_attending"
+					],
+					[
+						"person",
+						"personally_attending_model"
+					],
+					[
+						"per",
+						"personally_attending"
+					],
+					[
+						"perso",
+						"personally_attending_model"
+					]
+				]
+			},
+			"buffers":
+			[
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/main.js",
+					"settings":
+					{
+						"buffer_size": 1145,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/frontpage.js",
+					"settings":
+					{
+						"buffer_size": 6350,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/partypage.js",
+					"settings":
+					{
+						"buffer_size": 4586,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/organizationpage.js",
+					"settings":
+					{
+						"buffer_size": 6645,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/userpage.js",
+					"settings":
+					{
+						"buffer_size": 8428,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"contents": "body\n  padding: 50px\n  font: 14px \"Lucida Grande\", Helvetica, Arial, sans-serif\n  background #020204\n  //background: #0B0B0C;\n  //background: -moz-linear-gradient(top, #000000 0%, #0b0b0c 100%); /* FF3.6+ */\n  //background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#000000), color-stop(100%,#0b0b0c)); /* Chrome,Safari4+ */\n  //background: -webkit-linear-gradient(top, #000000 0%,#0b0b0c 100%); /* Chrome10+,Safari5.1+ */\n  //background: -o-linear-gradient(top, #000000 0%,#0b0b0c 100%); /* Opera 11.10+ */\n  //background: -ms-linear-gradient(top, #000000 0%,#0b0b0c 100%); /* IE10+ */\n  //background: linear-gradient(to bottom, #000000 0%,#0b0b0c 100%); /* W3C */\n/*\n#body_wrapper\n  width 960px\n  margin auto \n*/\n\n/* Header Styling */\n\n#header_box\n  padding: 0 0 5px 0\n  //text-align: right\n  width: 100%\n  border-bottom: 2px groove #4EBB38\n  height: 65px\n  left: 0\n  position: absolute\n  top: 0\n  width: 100%\n  z-index: 900\n  background: #1A1A1C; /* Old browsers */\n  background: -moz-linear-gradient(top, #1A1A1C 0%,#040408 100%); /* FF3.6+ */\n  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1A1A1C), color-stop(100%,#040408)); /* Chrome,Safari4+ */\n  background: -webkit-linear-gradient(top, #1A1A1C 0%,#040408 100%); /* Chrome10+,Safari5.1+ */\n  background: -o-linear-gradient(top, #1A1A1C 0%,#040408 100%); /* Opera 11.10+ */\n  background: -ms-linear-gradient(top, #1A1A1C 0%,#040408 100%); /* IE10+ */\n  background: linear-gradient(to bottom, #1A1A1C 0%,#040408 100%); /* W3C */\n  //filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#45484d', endColorstr='#040408',GradientType=0 ); /* IE6-9 */\n\n#header\n  width 960px\n  margin 0px auto\n  height 100%\n  position relative\n  padding 0px 1em\n  clear both\n\n.header_left\n  float left\n\n.header_right\n  float right\n\n#logo\n  float left\n\n#header_start_party\n  color #3F75CE\n  //position absolute\n  //left 15em\n  float left\n  height 100%\n  padding 5px 20px \n  border-right 1px solid #52C43C\n  border-left 1px solid #52C43C\n  cursor pointer\n  line-height 100%\n  font-size 30px\n  font-weight bold \n  text-align left\n  margin-left 10px \n\n#header_start_party:hover\n  color #FFFFFF\n  background #3B72CD\n  border none\n\n#header_check_map\n  color #3F75CE\n  //position absolute\n  //left 28em\n  float left\n  height 100%\n  padding 5px 20px\n  border-right 1px solid #52C43C\n  cursor pointer\n  line-height 100%\n  font-size 30px\n  font-weight bold \n  text-align left\n\n#header_check_map:hover\n  color #FFFFFF\n  background #4EBB38\n  border none\n\n#header_input\n  float left\n  margin-left 25px\n  margin-top 17px\n  //width 200px\n\n\n.header_link_left\n  border-bottom:1px solid #1D2025;\n  border-right:1px solid #1D2025;\n  margin-left 25px\n\n.header_link_left:hover\n  background: #CF1414   \n  color #ffffff\n\n.header_link_middle\n  border-bottom:1px solid #1D2025;\n\n.header_link_middle:hover\n  background: #4EBB38   \n  color #ffffff\n\n\n.header_link_right\n  border-bottom:1px solid #1D2025;\n  border-left:1px solid #1D2025;\n\n.header_link\n  float left\n  width 60px\n  padding 5px 0px\n  text-align center\n  color: #999999\n  transition: background .25s ease-in-out;\n  -moz-transition: background .25s ease-in-out;\n  -webkit-transition: background .25s ease-in-out;\n  \n\n.header_link_right:hover\n  background: #3F75CE   \n  color #ffffff  \n\n/* *************** */\n\n/* Base Frame */\n\n#main\n  width 960px\n  margin 25px auto 0 auto\n  height 600px\n  //border-left 1px solid #000\n  //border-right 1px solid #000\n\n#left_column\n  width 600px\n  margin auto \n  min-height 600px\n  float left\n  background #040408 \n  padding-bottom 10px\n  border 1px solid #0C0C0C\n  border-radius 5px 0 0 5px\n\n#right_column \n  width 356px\n  margin auto\n  border-left 1px solid #000\n  min-height 600px\n  float right\n  background #040408\n  padding-bottom 10px\n  border-right 1px solid #0C0C0C\n  border-top 1px solid #0C0C0C\n  border-bottom 1px solid #0C0C0C\n  border-radius 0 5px 5px 0\n\n/* Footer Styling */\n\n/*\n#footer_box\n  padding: 5px\n  border-top: 1px solid #000\n  height: 5.4em\n  left: 0\n  position: absolute\n  top: 0\n  width: 100%\n  z-index: 900\n*/\n\n/* *************** */\n\n/* Page Header */\n\n#page_header\n  height 40px\n  box-shadow 0 2px 0 0 #262626, 0 -1px 0 0 #171717\n  border-radius 5px 5px 0 0 \n\n#page_header_text\n  font-size 24px\n  color #FFFFFF\n  padding 6px 0 0 10px\n\n.page_header_currently_happening\n  background #52C43C\n\n.page_header_upcoming\n  background #3F75CE\n\n.page_header_attending\n  background #79A4EC\n\n.page_header_chillin\n  background #10101A \n\n/* ************ */\n/* Parties List */\n/* ************ */\n\n.list_wrap\n  list-style none\n  margin 0\n  padding 0\n\n.list_wrap li   \n  border-bottom: 1px solid #1D2025;\n  margin 15px 15px\n  padding 0 0 15px 0\n\n#current_parties_list_wrap\n  clear both \n\n.party_list_thumbnail\n  float left\n  background #111111\n  width 100px\n  height 100px\n  margin-right 10px\n\n.plch\n  border 1px solid #52C43C\n\n.plu\n  border 1px solid #3F75CE  \n\n.pls\n  border 1px solid #CF1414\n\n.plf\n  border 1px solid #CBFB00\n\n.party_list_party_name a\n  font-size 18px\n  color #52C43C\n  clear right\n  font-weight bold\n  text-decoration none\n\n.party_list_founder_name\n  color #3F75CE\n  font-weight bold\n\n.party_list_date_time\n  color #DED5B3\n  //color #999999\n\n.party_list_venue\n  color #3F75CE\n  //font-weight bold\n  \n\n.party_list_location\n  color #DED5B3\n\n.party_list_age\n  color #DED5B3\n  float right \n\n.party_list_type\n  color #DED5B3\n  float right\n\n.party_list_currently_attending\n  color #DED5B3\n  float right\n\n.party_list_attending\n  color #DED5B3\n\n.party_list_ratio\n  float right\n  color #DED5B3\n\n#upcoming_parties_list span\n  //font-weight bold\n  //color #CF1414\n  //color #52C43C\n  color #3F75CE\n\n#current_parties_list span\n  //font-weight bold\n  //color #CF1414\n  //color #52C43C\n  color #3F75CE\n\n/* *************** */\n\n/* Side Bar Thumbnail Lists */\n\n.thumb_sidebar_element\n  //background none repeat scroll 0 0 #100005\n  //border 1px solid #000111\n  //margin-right 10px\n  padding-top 5px\n\n.thumb_sidebar_img\n  background #111111\n  width 50px\n  height 50px\n  float left \n  margin 5px\n\n.thumb_sidebar_header\n  font-weight bold\n\n.thumb_sidebar_name\n  float left\n\n.thumb_sidebar_chillin\n  color #FFFFFF  \n\n.thumb_sidebar_attending\n  color #6994d8\n\n.thumb_sidebar_upcoming\n  color #3F75CE\n\n.thumb_sidebar_currently_attending\n  color #52C43C\n\n.thumb_sidebar_chillin_img\n  border 2px solid #999999\n\n.thumb_sidebar_attending_img\n  border 2px solid #6994d8\n\n.thumb_sidebar_upcoming_img\n  border 2px solid #3F75CE\n\n.thumb_sidebar_currently_attending_img\n  border 2px solid #52C43C\n\n.thumb_sidebar_list_wrap\n  list-style none\n  margin 10px 0 0 0\n  padding 0\n\n.thumb_sidebar_list_wrap li   \n  margin 0 0 5px 10px\n\n.sidebar_default\n  font-size 12px\n  color #FFFFFF\n  margin 0 0 10px 10px\n\n/* *************** */\n\n/* ------------------------------------------- */\n\n/* ------------------------------------------- */\n\n/* Party Sections */\n\n.party_header\n  color #FFFFFF\n  padding 5px 0 5px 7px\n  text-align left\n  width: 99%\n  font-size 14px\n\n.current_parties_header\n  background #52C43C\n   \n.upcoming_parties_header\n  background #3F75CE\n\n.friends_parties_header\n  background #CFA614\n\n.subscribed_parties_header\n  background #CF1414\n\n.party_list_default\n  color #FFFFFF\n  /*background #040408*/\n  padding 10px 0\n  text-align center\n\n\n/* ------------------------------------------- */\n\n\n/* ------------------------------------------- */\n\n/* Special Classes */\n\n/*\ninput.input_box\n  border:1px solid #2a2e31;\n  background-color:#2d3035;\n  color:#505358;\n*/\n\n.section_title\n  color #FFFFFF\n  font-size 15px\n  padding 5px 0 0 7px\n  text-align left\n  width: 98% \n\n.search {\n  padding:6px 5px 6px 30px;\n  margin:3px;\n  width: 200px;\n  background: url('/images/search.png') no-repeat 8px 6px;\n}\n\n.search_weather {\n  padding:4px 8px 2px 8px;\n  margin: 3px 3px 3px 0;\n  width: 116px;\n  border-radius 15px\n  //background: url('/images/search.png') no-repeat 8px 6px;\n}\n\n.rounded {\n  border-radius:15px;\n  -moz-border-radius:15px;\n  -webkit-border-radius:15px;\n}\n\n.total\n  float right\n  margin-right 15px\n\n.dark\n  border:1px solid #1D2025;\n  background-color:#1A1D22;\n  color:#505358;\n\n.page_link\n  color #3F75CE\n\n\n.page_link:link\n  text-decoration none\n  margin-top 10px\n\n.page_link:hover\n  text-decoration none\n  color #FFFFFF\n\ninput::-webkit-input-placeholder { /* WebKit browsers */\n    color:    #999;\n}\ninput:-moz-placeholder { /* Mozilla Firefox 4 to 18 */\n    color:    #999;\n}\ninput::-moz-placeholder { /* Mozilla Firefox 19+ */\n    color:    #999;\n}\ninput:-ms-input-placeholder { /* Internet Explorer 10+ */\n    color:    #999;\n}\n\n.negative_sign\n  width 25px\n  height 25px\n  font-weight bold\n  font size 16px\n  text-align center\n  float left\n\n.positive_sign\n  width 25px\n  height 25px\n  font-weight bold\n  font size 16px\n  text-align center\n  float left\n\n.info_border\n  border-left solid 1px #111111\n  height 210px\n  margin 5px 10px 5px 0 \n  float left\n",
+					"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/general.styl",
+					"file_size": 8925,
+					"file_write_time": 1373508056000000,
+					"settings":
+					{
+						"buffer_size": 8926,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/userpage.styl",
+					"settings":
+					{
+						"buffer_size": 4376,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/partypage.styl",
+					"settings":
+					{
+						"buffer_size": 3394,
+						"line_ending": "Unix"
+					}
+				},
+				{
+					"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/frontpage.styl",
+					"settings":
+					{
+						"buffer_size": 1687,
+						"line_ending": "Unix"
+					}
+				}
+			],
+			"build_system": "",
+			"command_palette":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"console":
+			{
+				"height": 0.0
+			},
+			"distraction_free":
+			{
+				"menu_visible": true,
+				"show_minimap": false,
+				"show_open_files": false,
+				"show_tabs": false,
+				"side_bar_visible": false,
+				"status_bar_visible": false
+			},
+			"file_history":
+			[
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/app.js",
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/userpage.styl",
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/frontpage.css",
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/general.css",
+				"/home/alex/Dropbox/ZeroDay/public/stylesheets/userpage.css",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Party_History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Pictures.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Subscribed.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Comments.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Awards.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/frontpage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/partypage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Thumb_Sidebar.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/collections/General/Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/userpage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Awards.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Comments.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Currently_Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Current_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Friends_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Members.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Party_History.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Party_People.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Pictures.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Subscribed.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Subscribed_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/Upcoming_Parties.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/General/User_Attending.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/organizationpage.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/main.js",
+				"/home/alex/Dropbox/ZeroDay/app.js",
+				"/home/alex/Dropbox/ZeroDay/routes/user_page.js",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/templates/UserPage/user_information_grid.tpl",
+				"/home/alex/Dropbox/ZeroDay/public/javascripts/views/UserPage/User_Information_Grid.js",
+				"/home/alex/School/Spring 2013/ProcessorDesign/Homework3/Assembler/addTest.s"
+			],
+			"find":
+			{
+				"height": 34.0
+			},
+			"find_in_files":
+			{
+				"height": 0.0,
+				"where_history":
+				[
+				]
+			},
+			"find_state":
+			{
+				"case_sensitive": false,
+				"find_history":
+				[
+					"party_list",
+					"gen_info_text",
+					"header",
+					"search_weath",
+					"000000",
+					"222326",
+					"50px",
+					"total",
+					"info_grid",
+					"Upcoming_Parties",
+					"upcoming",
+					"party_page"
+				],
+				"highlight": true,
+				"in_selection": false,
+				"preserve_case": false,
+				"regex": false,
+				"replace_history":
+				[
+					"040408",
+					"1A1A1C",
+					"gen"
+				],
+				"reverse": false,
+				"show_context": true,
+				"use_buffer2": true,
+				"whole_word": false,
+				"wrap": true
+			},
+			"groups":
+			[
+				{
+					"selected": 5,
+					"sheets":
+					[
+						{
+							"buffer": 0,
+							"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/main.js",
+							"settings":
+							{
+								"buffer_size": 1145,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1094,
+										1094
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 1,
+							"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/frontpage.js",
+							"settings":
+							{
+								"buffer_size": 6350,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										623,
+										623
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 2,
+							"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/partypage.js",
+							"settings":
+							{
+								"buffer_size": 4586,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										0,
+										0
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 3,
+							"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/organizationpage.js",
+							"settings":
+							{
+								"buffer_size": 6645,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										3613,
+										3613
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1620.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 4,
+							"file": "/home/alex/Dropbox/ZeroDay/public/javascripts/controllers/userpage.js",
+							"settings":
+							{
+								"buffer_size": 8428,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1649,
+										1649
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 1463.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 5,
+							"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/general.styl",
+							"settings":
+							{
+								"buffer_size": 8926,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										4253,
+										4253
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 2340.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 6,
+							"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/userpage.styl",
+							"settings":
+							{
+								"buffer_size": 4376,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										1031,
+										1031
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"translate_tabs_to_spaces": false
+								},
+								"translation.x": 0.0,
+								"translation.y": 420.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 7,
+							"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/partypage.styl",
+							"settings":
+							{
+								"buffer_size": 3394,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										2354,
+										2354
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 75.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						},
+						{
+							"buffer": 8,
+							"file": "/home/alex/Dropbox/ZeroDay/public/stylesheets/frontpage.styl",
+							"settings":
+							{
+								"buffer_size": 1687,
+								"regions":
+								{
+								},
+								"selection":
+								[
+									[
+										19,
+										19
+									]
+								],
+								"settings":
+								{
+									"syntax": "Packages/Text/Plain text.tmLanguage",
+									"tab_size": 2,
+									"translate_tabs_to_spaces": true
+								},
+								"translation.x": 0.0,
+								"translation.y": 0.0,
+								"zoom_level": 1.0
+							},
+							"type": "text"
+						}
+					]
+				}
+			],
+			"incremental_find":
+			{
+				"height": 0.0
+			},
+			"input":
+			{
+				"height": 0.0
+			},
+			"layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			},
+			"menu_visible": true,
+			"position": "0,0,0,0,0,0,19,1918,1198,1920,1200",
+			"replace":
+			{
+				"height": 62.0
+			},
+			"save_all_on_build": true,
+			"select_file":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"select_project":
+			{
+				"height": 0.0,
+				"selected_items":
+				[
+				],
+				"width": 0.0
+			},
+			"show_minimap": true,
+			"show_open_files": false,
+			"show_tabs": true,
+			"side_bar_visible": true,
+			"side_bar_width": 150.0,
+			"status_bar_visible": true,
+			"window_id": 1,
+			"workspace_name": ""
+		}
+	],
+	"workspaces":
+	{
+		"recent_workspaces":
+		[
+		]
+	}
+}

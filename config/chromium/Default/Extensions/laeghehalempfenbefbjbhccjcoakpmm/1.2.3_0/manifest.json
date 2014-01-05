@@ -1,0 +1,19 @@
+{
+   "background_page": "background.html",
+   "browser_action": {
+      "default_icon": "icon.png",
+      "title": "__MSG_buttonHint__"
+   },
+   "default_locale": "en",
+   "description": "__MSG_pluginDesc__",
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQClGfjfNOhNB6t1J+gQpcraVUHAYEnVl+vO0C1EKu4X917eIvbpZdO5BYIkb7QGex1ACEaF2kshhibwgxVDZ+eToZXip8G//q+guNhnElTCQttXnEu6nmFhHDE0NNJ7pVUTLv9VoCpdsI3b0OdEN+X4U8UkCbbqDhx8VVlU/HxJdwIDAQAB",
+   "name": "JDownloader Integration for Google Chrome\u2122",
+   "options_page": "options.html",
+   "permissions": [ "tabs", "contextMenus", "http://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.2.3"
+}

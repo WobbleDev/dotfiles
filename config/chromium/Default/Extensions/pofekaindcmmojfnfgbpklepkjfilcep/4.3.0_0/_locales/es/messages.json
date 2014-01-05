@@ -1,0 +1,13 @@
+{
+   "buttonText": {
+      "description": "Texto de ayuda del bot\u00F3n.",
+      "message": "Abra el v\u00EDdeo en una ventana nueva"
+   },
+   "description": {
+      "description": "Describir la extensi\u00F3n.",
+      "message": "Agregar un bot\u00F3n a YouTube\u2122 para que aparezca el v\u00EDdeo se convierte en una nueva ventana de tama\u00F1o variable."
+   },
+   "name": {
+      "message": "Ventanita de YouTube\u2122"
+   }
+}

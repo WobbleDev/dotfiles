@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Bingo Options</title>
+<script type="text/javascript" src="options.js"></script>
+</head>
+<body>
+	<a href="http://gtiny.me/wq" target="_blank"
+		title="What is Bing Rewards?">Bing Rewards</a>
+	<br> Multiplier:
+	<select id="multiplier">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5">5</option>
+	</select>
+	<button id="s_multiplier">Save</button>
+	<br> Automatically search
+	<select id="rate">
+		<option value="0">0</option>
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+	</select> times every half an hour.
+	<button id="s_rate">Save</button>
+	<br> Use
+	<input type="radio" name="keywords_method" id="keywords_method_0"
+		value="0" />Random
+	<input type="radio" name="keywords_method" id="keywords_method_1"
+		value="1" />Predefined keywords in multiplier and in automatic
+	search.
+	<button id="s_keywords_method">Save</button>
+	<br> Search Keywords
+	<br>
+	<textarea id="search_keywords" rows="10" cols="">
+	</textarea>
+	<button id="s_search_keywords">Save</button>
+	<br>
+	<font color="red">Warning:<br>The extension will update the
+		following two values from user's Bing account. These manual settings
+		will be overridden by your account value after update.
+	</font>
+	<br>Daily Rewards Cap:
+	<input id="limit" value="20" maxlength="3" size="3">
+	<button id="s_limit">Save</button>
+	<br> Rewards Earned Today:
+	<label id="count"></label>
+	<button id="r_count">Reset</button>
+	<hr>
+	<a href="http://gtiny.me/zp" target="_blank" title="What is Swagbucks?">Swagbucks</a>
+	Plugin:
+	<font color="red">Due to legal issues, we have disabled
+		Swagbucks plugin since version 2.0.</font>
+	<!-- 	<input type="checkbox" id="options_swagbucks" class="options" />Enabled
+	<a href="http://gtiny.me/zt" target="_blank">How to Use?</a>
+	<div id="swagbucks_options" class="swagbucks_options">
+		Send search requests at most <select id="swagbucks_options_limit">
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+			<option value="13">13</option>
+			<option value="14">14</option>
+			<option value="15">15</option>
+			<option value="16">16</option>
+			<option value="17">17</option>
+			<option value="18">18</option>
+			<option value="19">19</option>
+			<option value="20">20</option>
+		</select> times in every <select id="swagbucks_options_timeout">
+			<option value="0">0</option>
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+			<option value="11">11</option>
+			<option value="12">12</option>
+		</select> hours. Please also note that if there is a hit, which means you win
+		some Swagbucks, the plugin will stop sending requests during the hours
+		you set. Setting hours to zero tells the plugin to perform the search
+		without break.
+	</div> -->
+	<hr>
+	Additional Search Plugin:
+	<font color="red">However, we provide this plugin which sends
+		one additional search request to one website specified by you.</font>
+	<input type="checkbox" id="options_addition" class="options" />Enabled
+	<a href="http://gtiny.me/5eg" target="_blank">How to Use?</a>
+	<div id="addition_options" class="addition_options">
+		Search URL: http://<input id="addition_options_url" value=""
+			maxlength="256" size="30">/?q=%s.
+		<button id="s_addition_options">Save</button>
+		Please do not include prefix <i>http://</i> and suffix <i>/?q=%s</i>.
+		For example, if you input <i>www.someurl.com</i> and your search
+		keyword is <i>bingo</i>, the search request URL generated will be <i>http://www.someurl.com/?q=bingo</i>,
+		which will be accepted by most search engines. When you click save for
+		the first time, Chrome will ask you about permission. Because we
+		cannot dynamically add a permission for a single website, we have to
+		include all websites. However, we did our best to use as few
+		permissions as possible, which is <i>http://*/?q=*</i>.
+	</div>
+</body>
+</html>

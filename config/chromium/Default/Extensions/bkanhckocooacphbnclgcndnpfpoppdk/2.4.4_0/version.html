@@ -1,0 +1,216 @@
+<!--
+
+Copyright (c) 2009-2010 by Victor Alberto Gil a.k.a. vhanla
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+
+NOTICE THAT SOME CODE USED HERE ARE RESPECTIVE TO THEIR AUTHORS AND THEY 
+WILL BE MENTIONED IN THEIR RESPECTIVE LOCATION
+-->
+
+<html>
+<head>
+<title>Web2PDFConvert v2.4.4</title>
+<style type="text/css">
+body {
+    font-size: 12px;
+    font-color: #333;
+    font-family:Helvetica,Arial,sans-serif;
+    background: #fff;
+    font-size: 9px;
+    padding: 2px 25%;
+}
+textarea{
+    border: 1px solid #b7c5e3;
+    margin: 0;
+    height: 64px;
+    width: 320px;
+    resize: none;
+    background: #f0f5fb;
+    -webkit-border-radius: 5px;
+    padding: 2px;
+    font-size: 12px;
+    position: relative;
+    z-index: 10;
+    color: #0077bd;
+    font-family:Helvetica,Arial,sans-serif;    
+}
+@font-face{
+	font-family: 'Loyal';
+	src: url('ARLRDBD.ttf');	
+}
+textarea:focus {
+    background: #fff;
+    color: #0088ce;
+}
+textarea.full {
+    border-color: #f60;
+}
+
+#d_calip_container span {
+    background: #0088ce; /*background: #f60;*/
+    display: inline-block;
+    padding: 2px 5px;
+    color: #fff;
+    -webkit-border-radius: 12px;
+     cursor: pointer;
+}
+
+span {
+    display: inline-block;
+    padding: 5px 5px;    
+    /*border: 1px solid #d5e4f7;*/
+    -webkit-border-radius: 13px;
+     cursor: pointer;
+     color: #fff;
+     background: #0088ce;
+     -webkit-box-shadow:-1px 1px 2px rgba(0,136,206,.2)
+}
+span:hover{
+	background: #f0f5fb;
+	color: #0088ce;
+	/*border:1px solid #b7c5e3;*/
+	/*-webkit-transform:scale(1.05);*/
+	-webkit-box-shadow:-1px 2px 2px rgba(0,136,206,.8);
+}
+
+#clean {
+	width:75%; 
+	color: #fff;
+	text-align:center; 
+	/*border:1px solid black; */
+	background-color:#aaa; 
+	-webkit-border-radius: 3px;
+	-webkit-transform: scale(1.25);
+	margin:5px; padding:5px; 
+        }
+#clean.hover { background-color:#eee; }
+#clean.active { background-color:#aaa; }
+
+a{color:#000;}
+#user li a {-webkit-transform: rotate(-45deg);-webkit-transition:-webkit-transform .15s linear;-webkit-box-shadow: 0 3px 6px rgba(0,0,0,25);}
+/*#user li a img {width:100%; height:100%; border:0;}*/
+#user li a:hover {-webkit-transform: scale(1.25);-webkit-box-shadow:0 3px 6px rgba(0,0,0,.5);content: attr(alt);}
+/*let's animate with CSS3*/
+#user li a:after{content: attr(title);}
+/*rotate all even images 2 degrees*/
+/*#user li:nth-child(even) a{-webkit-transform: rotate(2deg);}*/
+/*don't rotate every third image, but offset its position*/
+/*#user li:nth-child(3n) a{-webkit-transform: none;position: relative;top: -5px;}*/
+/* rotate every fifth image by 5 degrees and offset it */
+/*#user li:nth-child(8n) a{position: relative;top: 8px;right: 5px;}*/
+/* keep default rotate for every eleventh, but offset it*/
+/*#user li:nth-child(11n) a{position: relative;top: 3px;left: -5px;}*/
+ 
+ 
+#bgadmin{
+	opacity: 0.7;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;	
+
+	background-color: black;	
+	z-index: 99;
+}
+ 
+#bgadmin2{	
+	z-index: 100;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	position: fixed;
+	top: 0;	
+
+}
+ 
+#admin2{	
+	width: 330px;
+	color: #fff;
+	padding: 20px 0px;
+}
+ #settings a{
+ 	color: #0088ce;
+	float: right;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size: 9px;	
+	text-decoration: none;	
+	font-weight:bold;
+ }
+  #url{
+ 	color: #0088ce;
+	float: right;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size: 9px;	
+	text-decoration: none;	
+	font-weight:bold;
+	cursor: pointer;
+ }
+ #other{
+ 	color: #0088ce;
+	float: right;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size: 9px;	
+	text-decoration: none;	
+	font-weight:bold;	
+ }
+ #words{
+	color: #0088ce;
+	float: right;
+	font-family:Helvetica,Arial,sans-serif;
+	font-size: 24px;	
+	opacity: 0.7;
+ }
+ #words strong{
+	color: #f60;
+ }
+</style>
+</head>
+<body onload="document.getElementById('bottom').innerHTML = chrome.i18n.getMessage('bottom')">
+<div id="header"><img src="logo2.png" /><strong>v2.4.4</strong></div><br />
+Web2PDFCovert extension has been updated to version 2.4.4<br />
+This new version includes some minor bug fixes but less options due to changes on Web2PDFConvert.com service.
+<p>
+The following features are available for premium accounts only.<br /><br />
+<strong>Features</strong>
+<li>ActiveX support like flash</li>
+<li>Image compression, less compression better image quality but higher size.</li>
+<li> Page Size</li>
+<li> Page Orientation </li>
+<li> TimeStamp </li>
+<li> Margins </li>
+<li> PDF Description </li>
+<li> PDF Security</li>
+<li> And many others </li>
+<br />
+<hr />
+	<div id="bottom" align="right">
+		Let your friends know about it. Add <strong><a href="http://www.web2pdfconvert.com" target="_blank">http://www.web2pdfconvert.com</a> </strong> to your site. 
+		<br />
+		Suggestions, feedback or maybe bug reports? Please feel free to  <a href="http://www.web2pdfconvert.com/forum/default.aspx" target="_blank">join us on our forum.</a>
+		<br />Extension written by vhanla and Icons designed by Marco Martin 
+		<br /><button  onclick="window.close()">OK</button>
+	</div>
+	
+</p>
+
+</body>
+</html>

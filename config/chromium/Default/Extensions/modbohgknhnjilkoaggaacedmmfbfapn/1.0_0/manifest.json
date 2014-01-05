@@ -1,0 +1,17 @@
+{
+   "background_page": "background.html",
+   "content_scripts": [ {
+      "js": [ "jquery.min.js", "grabber.js" ],
+      "matches": [ "http://*/*", "https://*/*" ]
+   } ],
+   "description": "Extract all links from webpage.",
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQC3ZBPg6eSCTXdoxAbKmbpPZjjZ0T6Us3wPQUfRRLTciH0m286HoaaRP6RFB60exIXzfxcPKcc9H2MU2rdNN3cJEGAAApojcY4oR1jZVRYuM6JusyFJPLCETGeauXig4tyi3+B8qiiynqAD7c1KcfRKvi0dF60uV9bpMbVajJE7swIDAQAB",
+   "name": "Link grabber",
+   "page_action": {
+      "default_icon": "link-grabber.png",
+      "default_title": "Grab links from this page."
+   },
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "1.0"
+}
